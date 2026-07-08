@@ -3,624 +3,741 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BidMachine Supply Sales Dashboard</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<title>Dual-Account Issue Report · Appodeal</title>
 <style>
+  
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
   :root {
-    --bg:       #0f1117;
-    --surface:  #181c27;
-    --card:     #1e2336;
-    --border:   #2a2f45;
-    --accent:   #4f7cff;
-    --accent2:  #34d399;
-    --accent3:  #f59e0b;
-    --accent4:  #f87171;
-    --text:     #e8eaf0;
-    --muted:    #6b7280;
-    --pill-bg:  #252b40;
-    --radius:   10px;
-    --font:     -apple-system, 'Segoe UI', system-ui, sans-serif;
-    --mono:     'SF Mono', 'Fira Code', monospace;
+    --navy:       #0f1124;
+    --navy-mid:   #1a1d3a;
+    --navy-soft:  #252850;
+    --accent:     #4f6ef7;
+    --accent-dim: #3a56d4;
+    --white:      #ffffff;
+    --off:        #f5f6fc;
+    --border:     #e2e4f0;
+    --text:       #1a1d3a;
+    --muted:      #6b7099;
+    --green-bg:   #edfaf3;
+    --green-text: #166534;
+    --green-bdr:  #86efac;
+    --amber-bg:   #fffbeb;
+    --amber-text: #92400e;
+    --amber-bdr:  #fcd34d;
+    --red-bg:     #fff1f2;
+    --red-text:   #9f1239;
+    --red-bdr:    #fda4af;
+    --mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 14px; line-height: 1.5; }
 
-  /* ── Layout ── */
-  .shell { display: flex; min-height: 100vh; }
-  .sidebar { width: 220px; flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border); padding: 1.5rem 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
-  .main { flex: 1; padding: 2rem 2.5rem; overflow-x: hidden; }
+  html { font-family: var(--sans); background: #f0f2fb; color: var(--text); min-height: 100vh; }
+  body { display: grid; grid-template-columns: 1fr 420px; min-height: 100vh; }
 
-  /* ── Sidebar ── */
-  .sidebar-logo { padding: 0 1.25rem 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
-  .sidebar-logo .wordmark { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: .02em; }
-  .sidebar-logo .sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
-  .sidebar-section { padding: 0 1.25rem; margin-bottom: .25rem; }
-  .sidebar-label { font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; padding: 0 .25rem; }
-  .rep-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border-radius: 7px; border: none; background: transparent; color: var(--muted); font-size: 13px; cursor: pointer; text-align: left; transition: background .12s, color .12s; }
-  .rep-btn:hover { background: var(--card); color: var(--text); }
-  .rep-btn.active { background: var(--accent); color: #fff; }
-  .rep-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; flex-shrink: 0; }
-  .rep-btn.active .rep-avatar { background: rgba(255,255,255,.2); }
-  .sidebar-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 1.25rem; }
-  .add-rep-btn { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 10px; margin: 0 0 0 0; border-radius: 7px; border: 1px dashed var(--border); background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; text-align: left; transition: border-color .12s, color .12s; }
-  .add-rep-btn:hover { border-color: var(--accent); color: var(--accent); }
+  /* ── FORM PANEL ─────────────────────────────────────────────────────── */
+  .form-panel { background: var(--white); overflow-y: auto; border-right: 1px solid var(--border); }
 
-  /* ── Header ── */
-  .page-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
-  .page-header-left .rep-name { font-size: 22px; font-weight: 600; }
-  .page-header-left .page-sub { font-size: 13px; color: var(--muted); margin-top: 3px; }
-  .period-tabs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px; }
-  .period-tab { padding: 6px 14px; border-radius: 7px; border: none; background: transparent; color: var(--muted); font-size: 13px; cursor: pointer; transition: background .12s, color .12s; }
-  .period-tab.active { background: var(--card); color: var(--text); font-weight: 500; }
+  .form-header {
+    background: var(--navy); padding: 36px 40px 28px;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .form-header h1 {
+    font-family: var(--mono); font-size: 18px; font-weight: 500;
+    color: var(--white); letter-spacing: -0.02em; margin-bottom: 4px;
+  }
+  .form-header p { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 300; }
 
-  /* ── Stat cards ── */
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 2rem; }
-  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.125rem; cursor: pointer; transition: border-color .15s, transform .1s; position: relative; overflow: hidden; }
-  .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent-color, var(--accent)); }
-  .stat-card:hover { border-color: var(--accent-color, var(--accent)); transform: translateY(-1px); }
-  .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 8px; }
-  .stat-value { font-size: 32px; font-weight: 700; color: var(--text); line-height: 1; font-variant-numeric: tabular-nums; }
-  .stat-sub { font-size: 11px; color: var(--muted); margin-top: 5px; }
+  /* Config banner */
+  .config-banner {
+    background: #fff8e6; border-bottom: 1px solid #fcd34d;
+    padding: 12px 40px; font-size: 12px; color: #92400e;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .config-banner.connected { background: #edfaf3; border-color: #86efac; color: #166534; }
+  .config-banner.error     { background: #fff1f2; border-color: #fda4af; color: #9f1239; }
+  .config-icon { font-size: 14px; flex-shrink: 0; }
+  .config-input {
+    flex: 1; font-family: var(--mono); font-size: 11px;
+    padding: 4px 8px; border-radius: 5px;
+    border: 1px solid #fcd34d; background: var(--white);
+    color: var(--text); outline: none; min-width: 0;
+  }
+  .config-input:focus { border-color: var(--accent); }
+  .config-btn {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    padding: 4px 10px; border-radius: 5px; cursor: pointer;
+    background: #92400e; color: var(--white); border: none;
+    flex-shrink: 0;
+  }
+  .config-btn:hover { background: #78350f; }
 
-  /* ── Chart ── */
-  .chart-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem; }
-  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
-  .chart-title { font-size: 13px; font-weight: 600; }
-  .chart-legend { display: flex; gap: 16px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .chart-wrap { height: 180px; position: relative; }
+  .form-body { padding: 32px 40px 40px; }
 
-  /* ── Stage breakdown ── */
-  .section-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
-  .stage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-bottom: 2rem; }
-  .stage-pill { display: flex; align-items: center; justify-content: space-between; background: var(--pill-bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 12px; cursor: pointer; transition: border-color .12s; }
-  .stage-pill:hover { border-color: var(--accent); }
-  .stage-pill-name { font-size: 12px; color: var(--text); }
-  .stage-pill-count { font-size: 13px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .section { margin-bottom: 32px; }
+  .section-label {
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* ── Drawer overlay ── */
-  .drawer-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 100; }
-  .drawer-overlay.open { display: block; }
-  .drawer { position: fixed; right: 0; top: 0; bottom: 0; width: 480px; max-width: 95vw; background: var(--surface); border-left: 1px solid var(--border); z-index: 101; display: flex; flex-direction: column; transform: translateX(100%); transition: transform .22s cubic-bezier(.4,0,.2,1); }
-  .drawer.open { transform: translateX(0); }
-  .drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-  .drawer-title { font-size: 14px; font-weight: 600; }
-  .drawer-count { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .drawer-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 20px; line-height: 1; padding: 2px; }
-  .drawer-close:hover { color: var(--text); }
-  .drawer-body { flex: 1; overflow-y: auto; padding: 1rem 1.5rem; }
-  .drawer-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .drawer-item:last-child { border-bottom: none; }
-  .drawer-item-name { font-size: 13px; font-weight: 500; }
-  .drawer-item-name a { color: var(--accent); text-decoration: none; }
-  .drawer-item-name a:hover { text-decoration: underline; }
-  .drawer-item-meta { display: flex; gap: 12px; margin-top: 4px; flex-wrap: wrap; }
-  .drawer-meta-tag { font-size: 11px; color: var(--muted); }
-  .drawer-meta-amount { font-size: 11px; color: var(--accent2); font-weight: 500; }
-  .drawer-item-notes { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
-  .drawer-empty { font-size: 13px; color: var(--muted); padding: 2rem 0; text-align: center; }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
 
-  /* ── Footer ── */
-  .page-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
-  .footer-text { font-size: 11px; color: var(--muted); }
-  .footer-link { font-size: 11px; color: var(--accent); text-decoration: none; }
-  .footer-link:hover { text-decoration: underline; }
+  label {
+    font-size: 11px; font-weight: 500;
+    color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase;
+  }
 
-  /* ── Loading / error ── */
-  .state-center { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; gap: 12px; color: var(--muted); }
-  .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+  input[type=text], select, textarea {
+    font-family: var(--sans); font-size: 14px; color: var(--text);
+    background: var(--off); border: 1.5px solid var(--border);
+    border-radius: 8px; padding: 10px 13px;
+    outline: none; transition: border-color 0.15s, background 0.15s; width: 100%;
+  }
+  input[type=text]:focus, select:focus, textarea:focus {
+    border-color: var(--accent); background: var(--white);
+    box-shadow: 0 0 0 3px rgba(79,110,247,0.1);
+  }
+  textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+  select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%236b7099' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+  }
+
+  .score-block { border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+  .score-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 11px 14px; border-bottom: 1px solid var(--border);
+  }
+  .score-item:last-child { border-bottom: none; }
+  .score-item-left { flex: 1; margin-right: 12px; }
+  .score-item-name { font-size: 13px; font-weight: 500; }
+  .score-item-desc { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .score-item-weight {
+    font-family: var(--mono); font-size: 10px; color: var(--muted);
+    background: var(--off); border: 1px solid var(--border);
+    padding: 1px 5px; border-radius: 4px; margin-left: 6px;
+  }
+  .score-pills { display: flex; gap: 4px; flex-shrink: 0; }
+  .pill-btn {
+    font-family: var(--mono); border: 1.5px solid var(--border);
+    background: var(--white); color: var(--muted);
+    border-radius: 6px; padding: 4px 12px; font-size: 13px;
+    cursor: pointer; transition: all 0.12s;
+  }
+  .pill-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .pill-btn.sel-1 { background: var(--green-bg); border-color: var(--green-bdr); color: var(--green-text); }
+  .pill-btn.sel-2 { background: var(--amber-bg); border-color: var(--amber-bdr); color: var(--amber-text); }
+  .pill-btn.sel-3 { background: var(--red-bg);   border-color: var(--red-bdr);   color: var(--red-text); }
+
+  .verdict-box {
+    border-radius: 10px; padding: 18px 20px;
+    border: 1.5px solid var(--border); background: var(--off); transition: all 0.3s;
+  }
+  .verdict-box.low  { background: var(--green-bg); border-color: var(--green-bdr); }
+  .verdict-box.med  { background: var(--amber-bg); border-color: var(--amber-bdr); }
+  .verdict-box.high { background: var(--red-bg);   border-color: var(--red-bdr); }
+  .verdict-inner { display: flex; align-items: center; gap: 16px; }
+  .verdict-score {
+    font-family: var(--mono); font-size: 36px; font-weight: 500;
+    color: var(--muted); min-width: 64px; text-align: center; transition: color 0.3s;
+  }
+  .verdict-box.low  .verdict-score { color: var(--green-text); }
+  .verdict-box.med  .verdict-score { color: var(--amber-text); }
+  .verdict-box.high .verdict-score { color: var(--red-text); }
+  .verdict-tier { font-size: 16px; font-weight: 600; color: var(--muted); transition: color 0.3s; }
+  .verdict-box.low  .verdict-tier { color: var(--green-text); }
+  .verdict-box.med  .verdict-tier { color: var(--amber-text); }
+  .verdict-box.high .verdict-tier { color: var(--red-text); }
+  .verdict-rec { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 8px; }
+  .btn {
+    font-family: var(--sans); font-size: 14px; font-weight: 500;
+    padding: 11px 22px; border-radius: 8px; cursor: pointer;
+    border: none; transition: all 0.15s; flex: 1;
+  }
+  .btn-primary { background: var(--accent); color: var(--white); }
+  .btn-primary:hover { background: var(--accent-dim); transform: translateY(-1px); }
+  .btn-secondary { background: var(--off); color: var(--text); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { background: var(--border); }
+
+  /* ── LOG PANEL ──────────────────────────────────────────────────────── */
+  .log-panel { background: var(--navy); display: flex; flex-direction: column; overflow: hidden; }
+
+  .log-header { padding: 36px 28px 20px; border-bottom: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
+  .log-header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .log-header h2 {
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
+    color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .log-count { font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.3); }
+  .log-header p { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+  .log-status {
+    display: flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 10px;
+    color: rgba(255,255,255,0.25); margin-top: 8px;
+  }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); flex-shrink: 0;
+    transition: background 0.3s;
+  }
+  .status-dot.connected { background: #4ade80; }
+  .status-dot.error     { background: #f87171; }
+  .status-dot.loading   { background: #fbbf24; animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .log-list { flex: 1; overflow-y: auto; padding: 16px 20px 24px; }
+  .log-list::-webkit-scrollbar { width: 4px; }
+  .log-list::-webkit-scrollbar-track { background: transparent; }
+  .log-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+  .log-empty {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: 200px; text-align: center;
+  }
+  .log-empty-icon { font-size: 32px; margin-bottom: 12px; opacity: 0.3; }
+  .log-empty p { font-size: 13px; color: rgba(255,255,255,0.25); line-height: 1.5; }
+
+  .log-loading {
+    display: flex; align-items: center; justify-content: center;
+    height: 120px; gap: 8px;
+    font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.25);
+  }
+  .spinner {
+    width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.1);
+    border-top-color: rgba(255,255,255,0.4); border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── Responsive ── */
-  @media (max-width: 720px) {
-    .sidebar { display: none; }
-    .main { padding: 1.25rem; }
-    .stat-value { font-size: 24px; }
-    .drawer { width: 100vw; }
+  .log-entry {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .log-entry:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); transform: translateX(2px); }
+  .log-entry-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .log-entry-num { font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.25); flex-shrink: 0; margin-top: 2px; }
+  .log-entry-title { font-size: 13px; font-weight: 500; color: var(--white); flex: 1; line-height: 1.4; }
+  .log-badge { font-size: 10px; font-weight: 600; font-family: var(--mono); padding: 2px 8px; border-radius: 20px; flex-shrink: 0; }
+  .badge-low  { background: var(--green-bg); color: var(--green-text); }
+  .badge-med  { background: var(--amber-bg); color: var(--amber-text); }
+  .badge-high { background: var(--red-bg);   color: var(--red-text); }
+  .badge-none { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.3); }
+  .log-entry-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .log-meta-chip {
+    font-size: 11px; color: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.05); padding: 2px 7px;
+    border-radius: 4px; border: 1px solid rgba(255,255,255,0.06);
+  }
+  .log-load-hint { font-size: 10px; color: rgba(255,255,255,0.2); margin-top: 6px; text-align: right; font-family: var(--mono); }
+
+  .log-actions { padding: 14px 20px; border-top: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; display: flex; gap: 8px; }
+  .btn-log {
+    flex: 1; font-family: var(--sans); font-size: 12px; font-weight: 500;
+    padding: 9px; border-radius: 8px; cursor: pointer;
+    background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.1); transition: all 0.15s;
+  }
+  .btn-log:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+
+  /* ── TOAST ──────────────────────────────────────────────────────────── */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--navy); color: var(--white);
+    padding: 12px 20px; border-radius: 10px;
+    font-size: 13px; font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    transform: translateY(80px); opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 100; pointer-events: none;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  @media (max-width: 900px) {
+    body { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+    .log-panel { min-height: 320px; }
+    .form-panel { border-right: none; border-bottom: 1px solid var(--border); }
   }
 </style>
 </head>
 <body>
 
-<div class="shell">
-  <!-- Sidebar -->
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <div class="wordmark">BidMachine</div>
-      <div class="sub">Supply Sales Dashboard</div>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-label">Sales reps</div>
-      <div id="rep-list"></div>
-    </div>
-    <hr class="sidebar-divider">
-    <div class="sidebar-section">
-      <button class="add-rep-btn" onclick="showAddRepInfo()">
-        <span style="font-size:16px">+</span> Add a rep
-      </button>
-    </div>
-  </nav>
-
-  <!-- Main -->
-  <main class="main" id="main">
-    <div class="state-center" id="loading-state">
-      <div class="spinner"></div>
-      <div>Loading sales data…</div>
-    </div>
-    <div id="dashboard" style="display:none"></div>
-  </main>
-</div>
-
-<!-- Drawer -->
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
-<div class="drawer" id="drawer">
-  <div class="drawer-header">
-    <div>
-      <div class="drawer-title" id="drawer-title"></div>
-      <div class="drawer-count" id="drawer-count"></div>
-    </div>
-    <button class="drawer-close" onclick="closeDrawer()">×</button>
+<!-- ── FORM PANEL ─────────────────────────────────────────────────────────── -->
+<div class="form-panel">
+  <div class="form-header">
+    <h1>Dual-Account Issue Report</h1>
+    <p>Appodeal · Bid Machine — issue logging & prioritisation</p>
   </div>
-  <div class="drawer-body" id="drawer-body"></div>
+
+  <!-- Auto-connected to Google Sheets -->
+
+  <div class="form-body">
+
+    <div class="section">
+      <div class="section-label">Issue basics</div>
+      <div class="field-grid" style="margin-bottom:12px">
+        <div class="field">
+          <label>Reporter</label>
+          <input type="text" id="reporter" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label>Date noticed</label>
+          <input type="text" id="date" placeholder="e.g. 2025-04-22">
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:12px">
+        <label>Short title</label>
+        <input type="text" id="title" placeholder="e.g. Wrong sender shown on contract email">
+      </div>
+      <div class="field-grid" style="margin-bottom:12px">
+        <div class="field">
+          <label>Account causing confusion</label>
+          <select id="account">
+            <option value="">— select —</option>
+            <option>Appodeal</option>
+            <option>Bid Machine</option>
+            <option>Both / unclear</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Feature / flow affected</label>
+          <input type="text" id="feature" placeholder="e.g. Auth, CRM sync">
+        </div>
+      </div>
+      <div class="field">
+        <label>Describe what went wrong</label>
+        <textarea id="desc" placeholder="What did you do? What did you expect? What happened instead?"></textarea>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Impact scoring</div>
+      <div class="score-block" id="score-block"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Priority verdict</div>
+      <div class="verdict-box" id="verdict-box">
+        <div class="verdict-inner">
+          <div class="verdict-score" id="verdict-score">—</div>
+          <div>
+            <div class="verdict-tier" id="verdict-tier">Score all five dimensions</div>
+            <div class="verdict-rec"  id="verdict-rec">Fill in each impact score above</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Workaround & reproduction</div>
+      <div class="field-grid">
+        <div class="field">
+          <label>Current workaround</label>
+          <textarea id="workaround" placeholder="What does the team do now?" style="min-height:70px"></textarea>
+        </div>
+        <div class="field">
+          <label>Steps to reproduce</label>
+          <textarea id="repro" placeholder="Numbered steps to trigger it" style="min-height:70px"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" id="submit-btn" onclick="submitEntry()">Submit to Google Sheets</button>
+      <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+    </div>
+
+  </div>
 </div>
+
+<!-- ── LOG PANEL ──────────────────────────────────────────────────────────── -->
+<div class="log-panel">
+  <div class="log-header">
+    <div class="log-header-top">
+      <h2>Master Log</h2>
+      <span class="log-count" id="log-count">—</span>
+    </div>
+    <p>Live from Google Sheets · click any entry to reload</p>
+    <div class="log-status">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">Not connected</span>
+    </div>
+  </div>
+
+  <div class="log-list" id="log-list">
+    <div class="log-empty">
+      <div class="log-empty-icon">☁</div>
+      <p>Connect to Google Sheets above<br>to see the shared log here.</p>
+    </div>
+  </div>
+
+  <div class="log-actions">
+    <button class="btn-log" onclick="refreshLog()">↻ Refresh</button>
+    <button class="btn-log" onclick="exportCSV()">↓ Export CSV</button>
+  </div>
+</div>
+
+<!-- ── TOAST ──────────────────────────────────────────────────────────────── -->
+<div class="toast" id="toast"></div>
 
 <script>
-// ── State ────────────────────────────────────────────────────────────────────
-let DATA = null;
-let currentRepIdx = 0;
-let currentPeriod = 'week';
-let chartInstance = null;
-let currentChartType = 'bar';
+// ═══════════════════════════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════════════════════════
 
-const PERIOD_LABELS = { week: 'Last week', month: 'Last month', quarter: 'This quarter', last_quarter: 'Last quarter', year: 'Year to date' };
-
-const STAT_CONFIG = [
-  { key: 'deals_touched',  label: 'Deals touched',               color: '#4f7cff', detail: 'deals_touched' },
-  { key: 'new_deals',      label: 'New deals',                    color: '#34d399', detail: 'new_deals' },
-  { key: 'qualified_out',  label: 'Qualified out',                color: '#f87171', detail: 'qualified_out' },
-  { key: 'meetings',       label: 'Meetings',                     color: '#a78bfa', detail: 'meetings' },
-  { key: 'linkedin',       label: 'LinkedIn messages',            color: '#0ea5e9', detail: 'linkedin' },
-  { key: 'new_companies',  label: 'New companies',                color: '#f59e0b', detail: 'new_companies' },
-  { key: 'dau_us_added',   label: 'Deals with US DAU',           color: '#34d399', detail: 'dau_us_added' },
-  { key: 'dau_tier1_added',label: 'Deals with Tier 1 DAU',       color: '#6ee7b7', detail: 'dau_tier1_added' },
-  { key: 'peer_sdk',       label: 'Peer SDK qualified',           color: '#c084fc', detail: 'peer_sdk' },
+const DIMS = [
+  { id:"d1", name:"Client visibility",        desc:"Did a client see wrong info, wrong sender, or a confusing experience?", weight:3 },
+  { id:"d2", name:"Frequency",                desc:"1 = Rare · 2 = Weekly · 3 = Daily",                                     weight:1 },
+  { id:"d3", name:"Manual workaround effort", desc:"1 = <2 min · 2 = 2–15 min · 3 = >15 min",                              weight:1 },
+  { id:"d4", name:"Trust / brand risk",       desc:"1 = None · 2 = Minor · 3 = Serious",                                   weight:2 },
+  { id:"d5", name:"Data / security concern",  desc:"1 = No · 2 = Possible · 3 = Yes",                                      weight:3 },
 ];
+const MAX_SCORE = DIMS.reduce((a,d) => a + d.weight * 3, 0); // 30
 
-// ── Boot ─────────────────────────────────────────────────────────────────────
-async function boot() {
-  try {
-    const res = await fetch('./data/sales_data.json?t=' + Date.now());
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    DATA = await res.json();
-    document.getElementById('loading-state').style.display = 'none';
-    document.getElementById('dashboard').style.display = 'block';
-    buildSidebar();
-    render();
-  } catch (e) {
-    document.getElementById('loading-state').innerHTML = `
-      <div style="color:#f87171;font-size:13px">Could not load sales_data.json</div>
-      <div style="color:var(--muted);font-size:12px;max-width:320px;text-align:center">
-        Run <code style="background:var(--card);padding:2px 6px;border-radius:4px">python fetch_data.py</code>
-        then push to GitHub, or check the console for errors.
-      </div>`;
+const scores = { d1:0, d2:0, d3:0, d4:0, d5:0 };
+let cachedEntries = [];
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCRIPT URL MANAGEMENT
+// ═══════════════════════════════════════════════════════════════════════════
+
+function getScriptUrl() {
+  return "https://script.google.com/macros/s/AKfycbwre4o8Eqg6Y27dMWpa7Ja5AKZ6ciDb-D0xhiPaDW1X2DWaBNl3wRi1PC4H38lIGT3NbA/exec";
+}
+
+function saveScriptUrl() {
+  const url = document.getElementById("script-url").value.trim();
+  if (!url.startsWith("https://script.google.com")) {
+    toast("⚠ That doesn't look like a valid Apps Script URL");
+    return;
   }
+  localStorage.setItem("gsheet_script_url", url);
+  updateBanner("connecting");
+  refreshLog();
 }
 
-// ── Sidebar ───────────────────────────────────────────────────────────────────
-function buildSidebar() {
-  const list = document.getElementById('rep-list');
-  list.innerHTML = DATA.reps.map((r, i) => {
-    const initials = r.rep.name.split(' ').map(n => n[0]).join('').slice(0, 2);
-    return `<button class="rep-btn ${i === 0 ? 'active' : ''}" onclick="selectRep(${i})">
-      <div class="rep-avatar">${initials}</div>
-      <span>${r.rep.name}</span>
-    </button>`;
-  }).join('');
-}
+function updateBanner(state, msg) {
+  const banner = document.getElementById("config-banner");
+  const dot    = document.getElementById("status-dot");
+  const status = document.getElementById("status-text");
 
-function selectRep(idx) {
-  currentRepIdx = idx;
-  document.querySelectorAll('.rep-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-  render();
-}
 
-// ── Render ────────────────────────────────────────────────────────────────────
-function render() {
-  if (currentPeriod === 'compare') { renderCompare(); return; }
-  const rep = DATA.reps[currentRepIdx];
-  const period = rep.periods[currentPeriod];
-  const dash = document.getElementById('dashboard');
-
-  dash.innerHTML = `
-    <div class="page-header">
-      <div class="page-header-left">
-        <div class="rep-name">${rep.rep.name}</div>
-        <div class="page-sub">Updated ${DATA.generated_date} · ${PERIOD_LABELS[currentPeriod]}</div>
-      </div>
-      <div class="period-tabs">
-        ${['week','month','quarter','last_quarter','year','compare'].map(p => `
-          <button class="period-tab ${p === currentPeriod ? 'active' : ''}" onclick="selectPeriod('${p}')">${p === 'compare' ? 'Q vs Q' : PERIOD_LABELS[p]}</button>
-        `).join('')}
-      </div>
-    </div>
-
-    <div class="stats-grid">
-      ${STAT_CONFIG.map(s => {
-        const val = period.stats[s.key] || 0;
-        return `<div class="stat-card" style="--accent-color:${s.color}" onclick="openDrawer('${s.key}', '${s.label}')">
-          <div class="stat-label">${s.label}</div>
-          <div class="stat-value">${val}</div>
-          <div class="stat-sub">↗ click to view</div>
-        </div>`;
-      }).join('')}
-    </div>
-
-    <div class="chart-section">
-      <div class="chart-header">
-        <div class="chart-title">${chartTitle()}</div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div class="chart-legend">
-            <div class="legend-item"><div class="legend-dot" style="background:#4f7cff"></div>Deals</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>New deals</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Meetings</div>
-          </div>
-          <div style="display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:3px">
-            <button onclick="setChartType('bar')" id="btn-bar" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='bar'?'var(--card)':'transparent'};color:${currentChartType==='bar'?'var(--text)':'var(--muted)'}">Bar</button>
-            <button onclick="setChartType('pie')" id="btn-pie" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='pie'?'var(--card)':'transparent'};color:${currentChartType==='pie'?'var(--text)':'var(--muted)'}">Pie</button>
-          </div>
-        </div>
-      </div>
-      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
-    </div>
-
-    <div class="section-title">Stage breakdown — deals touched this ${currentPeriod === 'week' ? 'week' : currentPeriod}</div>
-    <div class="stage-grid">
-      ${renderStagePills(period)}
-    </div>
-
-    <div class="page-footer">
-      <div class="footer-text">BidMachine Supply Sales Dashboard · data via HubSpot API</div>
-      <a class="footer-link" href="https://app.hubspot.com/contacts/5606823/objects/0-3/?hubspot_owner_id=${rep.rep.id}" target="_blank" rel="noopener">View in HubSpot ↗</a>
-    </div>`;
-
-  renderChart(rep);
-}
-
-function chartTitle() {
-  if (currentPeriod === 'week')    return 'Activity this month — weekly view';
-  if (currentPeriod === 'month')   return 'Activity this month — by week';
-  if (currentPeriod === 'quarter') return 'Activity this quarter — by month';
-  return 'Activity this year — by quarter';
-}
-
-function chartDataKey() {
-  if (currentPeriod === 'week' || currentPeriod === 'month') return 'month';
-  if (currentPeriod === 'quarter' || currentPeriod === 'last_quarter') return 'quarter';
-  return 'year';
-}
-
-function setChartType(type) {
-  currentChartType = type;
-  const rep = DATA.reps[currentRepIdx];
-  if (currentPeriod === 'compare') {
-    renderCompare();
+  if (state === "connected") {
+    banner.className = "config-banner connected";
+    banner.innerHTML = `<span class="config-icon">✓</span><span>Connected to Google Sheets.</span><button class="config-btn" style="background:#166534" onclick="disconnectSheet()">Disconnect</button>`;
+    dot.className = "status-dot connected";
+    status.textContent = msg || "Connected";
+  } else if (state === "error") {
+    banner.className = "config-banner error";
+    banner.innerHTML = `<span class="config-icon">✗</span><span>${msg || "Connection failed."}</span><button class="config-btn" onclick="showConnectForm()">Reconnect</button>`;
+    dot.className = "status-dot error";
+    status.textContent = "Connection error";
+  } else if (state === "connecting") {
+    dot.className = "status-dot loading";
+    status.textContent = "Connecting…";
   } else {
-    renderChart(rep);
-    // re-render toggle buttons
-    document.querySelectorAll('[id^="btn-"]').forEach(b => {
-      const isActive = b.id === `btn-${type}`;
-      b.style.background = isActive ? 'var(--card)' : 'transparent';
-      b.style.color = isActive ? 'var(--text)' : 'var(--muted)';
-    });
+    dot.className = "status-dot";
+    status.textContent = "Not connected";
   }
 }
 
-function renderChart(rep) {
-  if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
-  const key = chartDataKey();
-  const cd = rep.charts[key];
-  const ctx = document.getElementById('activity-chart');
-  if (!ctx || !cd) return;
-
-  const PIE_COLORS = ['#4f7cff','#34d399','#a78bfa','#f59e0b','#f87171','#0ea5e9'];
-
-  if (currentChartType === 'pie') {
-    // For pie: show breakdown of deals touched by metric for the period
-    const period = rep.periods[currentPeriod] || rep.periods['week'];
-    const s = period.stats;
-    const labels = ['Deals touched','New deals','Qual. out','Meetings','LinkedIn','New cos','Tier 1 DAU','Peer SDK'];
-    const values = [s.deals_touched, s.new_deals, s.qualified_out, s.meetings, s.linkedin, s.new_companies, s.dau_tier1_added, s.peer_sdk];
-    chartInstance = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels,
-        datasets: [{ data: values, backgroundColor: PIE_COLORS, borderColor: '#0f1117', borderWidth: 2 }],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'right', labels: { color: '#9ca3af', font: { size: 11 }, padding: 12, boxWidth: 12 } },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-      },
-    });
-  } else {
-    chartInstance = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: cd.labels,
-        datasets: [
-          { label: 'Deals touched', data: cd.deals,     backgroundColor: '#4f7cff', borderRadius: 4, borderSkipped: false },
-          { label: 'New deals',     data: cd.new_deals,  backgroundColor: '#34d399', borderRadius: 4, borderSkipped: false },
-          { label: 'Meetings',      data: cd.meetings,   backgroundColor: '#a78bfa', borderRadius: 4, borderSkipped: false },
-        ],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-        scales: {
-          x: { grid: { color: '#2a2f45' }, ticks: { color: '#6b7280', font: { size: 11 } } },
-          y: { grid: { color: '#2a2f45' }, ticks: { color: '#6b7280', font: { size: 11 }, precision: 0 }, beginAtZero: true },
-        },
-      },
-    });
-  }
+function showConnectForm() {
+  const banner = document.getElementById("config-banner");
+  banner.className = "config-banner";
+  banner.innerHTML = `
+    <span class="config-icon">⚙️</span>
+    <span>Paste your Google Apps Script Web App URL:</span>
+    <input type="text" class="config-input" id="script-url" placeholder="https://script.google.com/macros/s/…/exec">
+    <button class="config-btn" onclick="saveScriptUrl()">Connect</button>
+  `;
+  const saved = getScriptUrl();
+  if (saved) document.getElementById("script-url").value = saved;
 }
 
-function renderStagePills(period) {
-  const stages = period.detail.stage_summary || {};
-  if (!Object.keys(stages).length) return '<div style="color:var(--muted);font-size:13px">No stage data for this period.</div>';
-  return Object.entries(stages)
-    .sort((a, b) => b[1].length - a[1].length)
-    .map(([stage, deals]) => `
-      <div class="stage-pill" onclick="openStageDrawer('${encodeURIComponent(stage)}')">
-        <span class="stage-pill-name">${stage}</span>
-        <span class="stage-pill-count">${deals.length}</span>
+function disconnectSheet() {
+  localStorage.removeItem("gsheet_script_url");
+  cachedEntries = [];
+  updateBanner("disconnected");
+  showConnectForm();
+  renderLog([]);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCORE UI
+// ═══════════════════════════════════════════════════════════════════════════
+
+function buildScoreBlock() {
+  document.getElementById("score-block").innerHTML = DIMS.map(d => `
+    <div class="score-item">
+      <div class="score-item-left">
+        <div class="score-item-name">${d.name}<span class="score-item-weight">${d.weight}×</span></div>
+        <div class="score-item-desc">${d.desc}</div>
       </div>
-    `).join('');
-}
-
-function selectPeriod(p) {
-  currentPeriod = p;
-  render();
-}
-
-// ── Drawer ────────────────────────────────────────────────────────────────────
-function openDrawer(key, label) {
-  const rep = DATA.reps[currentRepIdx];
-  const period = rep.periods[currentPeriod];
-  const items = period.detail[key] || [];
-
-  document.getElementById('drawer-title').textContent = label;
-  document.getElementById('drawer-count').textContent = `${items.length} item${items.length !== 1 ? 's' : ''} · ${PERIOD_LABELS[currentPeriod]}`;
-
-  const body = document.getElementById('drawer-body');
-  if (!items.length) {
-    body.innerHTML = '<div class="drawer-empty">No activity in this period.</div>';
-  } else if (key === 'meetings') {
-    body.innerHTML = items.map(m => `
-      <div class="drawer-item">
-        <div class="drawer-item-name">${m.title || 'Meeting'}</div>
-        <div class="drawer-item-meta">
-          <span class="drawer-meta-tag">${m.date}</span>
-          ${m.outcome ? `<span class="drawer-meta-tag">${m.outcome}</span>` : ''}
-        </div>
-        ${m.notes ? `<div class="drawer-item-notes">${m.notes}</div>` : ''}
-      </div>`).join('');
-  } else if (key === 'linkedin') {
-    body.innerHTML = items.map(n => `
-      <div class="drawer-item">
-        <div class="drawer-item-meta"><span class="drawer-meta-tag">${n.date}</span></div>
-        <div class="drawer-item-notes">${n.text}</div>
-      </div>`).join('');
-  } else if (key === 'new_companies') {
-    body.innerHTML = items.map(c => `
-      <div class="drawer-item">
-        <div class="drawer-item-name"><a href="${c.url}" target="_blank" rel="noopener">${c.name || '—'}</a></div>
-        <div class="drawer-item-meta">
-          <span class="drawer-meta-tag">${c.date}</span>
-          ${c.domain ? `<span class="drawer-meta-tag">${c.domain}</span>` : ''}
-        </div>
-      </div>`).join('');
-  } else {
-    body.innerHTML = items.map(d => {
-      const dauUs    = d.dau_us    ? `<span class="drawer-meta-tag">US DAU: ${Number(d.dau_us).toLocaleString()}</span>` : '';
-      const dauT1    = d.dau_tier1 ? `<span class="drawer-meta-tag">Tier 1 DAU: ${Number(d.dau_tier1).toLocaleString()}</span>` : '';
-      const amt      = d.amount    ? `<span class="drawer-meta-amount">$${Number(d.amount).toLocaleString('en-US', {maximumFractionDigits:0})}</span>` : '';
-      return `<div class="drawer-item">
-        <div class="drawer-item-name"><a href="${d.url}" target="_blank" rel="noopener">${d.name}</a></div>
-        <div class="drawer-item-meta">
-          <span class="drawer-meta-tag">${d.date}</span>
-          ${d.stage ? `<span class="drawer-meta-tag">${d.stage}</span>` : ''}
-          ${amt}${dauUs}${dauT1}
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('drawer').classList.add('open');
-}
-
-function openStageDrawer(encodedStage) {
-  const stage = decodeURIComponent(encodedStage);
-  const rep = DATA.reps[currentRepIdx];
-  const period = rep.periods[currentPeriod];
-  const items = (period.detail.stage_summary || {})[stage] || [];
-
-  document.getElementById('drawer-title').textContent = stage;
-  document.getElementById('drawer-count').textContent = `${items.length} deal${items.length !== 1 ? 's' : ''} · ${PERIOD_LABELS[currentPeriod]}`;
-
-  const body = document.getElementById('drawer-body');
-  body.innerHTML = items.length ? items.map(d => {
-    const dauUs  = d.dau_us    ? `<span class="drawer-meta-tag">US DAU: ${Number(d.dau_us).toLocaleString()}</span>` : '';
-    const dauT1  = d.dau_tier1 ? `<span class="drawer-meta-tag">Tier 1 DAU: ${Number(d.dau_tier1).toLocaleString()}</span>` : '';
-    const amt    = d.amount    ? `<span class="drawer-meta-amount">$${Number(d.amount).toLocaleString('en-US', {maximumFractionDigits:0})}</span>` : '';
-    return `<div class="drawer-item">
-      <div class="drawer-item-name"><a href="${d.url}" target="_blank" rel="noopener">${d.name}</a></div>
-      <div class="drawer-item-meta">
-        <span class="drawer-meta-tag">${d.modified}</span>
-        ${amt}${dauUs}${dauT1}
+      <div class="score-pills">
+        <button class="pill-btn" data-dim="${d.id}" data-val="1" onclick="pick(this)">1</button>
+        <button class="pill-btn" data-dim="${d.id}" data-val="2" onclick="pick(this)">2</button>
+        <button class="pill-btn" data-dim="${d.id}" data-val="3" onclick="pick(this)">3</button>
       </div>
-    </div>`;
-  }).join('') : '<div class="drawer-empty">No deals.</div>';
-
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('drawer').classList.add('open');
+    </div>
+  `).join("");
 }
 
-function renderCompare() {
-  const rep = DATA.reps[currentRepIdx];
-  const cd = rep.charts.quarter_vs_last;
-  const cq = rep.periods.quarter.stats;
-  const lq = rep.periods.last_quarter.stats;
-  const dash = document.getElementById('dashboard');
+function pick(btn) {
+  const dim = btn.dataset.dim, val = parseInt(btn.dataset.val);
+  scores[dim] = val;
+  document.querySelectorAll(`.pill-btn[data-dim="${dim}"]`).forEach(p => p.classList.remove("sel-1","sel-2","sel-3"));
+  btn.classList.add(`sel-${val}`);
+  updateVerdict();
+}
 
-  const delta = (curr, prev) => {
-    if (!prev) return '';
-    const diff = curr - prev;
-    const pct = prev > 0 ? Math.round((diff / prev) * 100) : 0;
-    const color = diff >= 0 ? 'var(--accent2)' : 'var(--accent4)';
-    const arrow = diff >= 0 ? '↑' : '↓';
-    return `<span style="font-size:11px;color:${color};margin-left:6px">${arrow}${Math.abs(pct)}%</span>`;
+// ═══════════════════════════════════════════════════════════════════════════
+// VERDICT
+// ═══════════════════════════════════════════════════════════════════════════
+
+function calcScore() {
+  const allSet = Object.values(scores).every(v => v > 0);
+  if (!allSet) return null;
+  return DIMS.reduce((a,d) => a + scores[d.id] * d.weight, 0);
+}
+
+function updateVerdict() {
+  const weighted = calcScore();
+  const box  = document.getElementById("verdict-box");
+  const sc   = document.getElementById("verdict-score");
+  const tier = document.getElementById("verdict-tier");
+  const rec  = document.getElementById("verdict-rec");
+
+  if (weighted === null) {
+    box.className = "verdict-box";
+    sc.textContent = "—";
+    tier.textContent = "Score all five dimensions";
+    rec.textContent = "Fill in each impact score above";
+    return;
+  }
+  const pct     = weighted / MAX_SCORE;
+  const display = Math.round(pct * 100) / 10;
+  sc.textContent = display;
+  if (pct <= 0.44)      { box.className="verdict-box low";  tier.textContent="Low priority";    rec.textContent="Backlog — review in next planning cycle"; }
+  else if (pct <= 0.72) { box.className="verdict-box med";  tier.textContent="Medium priority"; rec.textContent="Schedule within current or next sprint"; }
+  else                  { box.className="verdict-box high"; tier.textContent="High priority";   rec.textContent="Escalate to dev — fix before next release"; }
+}
+
+function getPriority() {
+  const weighted = calcScore();
+  if (weighted === null) return "—";
+  const pct = weighted / MAX_SCORE;
+  if (pct <= 0.44) return "Low";
+  if (pct <= 0.72) return "Medium";
+  return "High";
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SUBMIT → GOOGLE SHEETS
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function submitEntry() {
+  const url = getScriptUrl();
+  if (!url) { toast("⚠ Connect to Google Sheets first"); return; }
+
+  const reporter = document.getElementById("reporter").value.trim();
+  const title    = document.getElementById("title").value.trim();
+  if (!reporter || !title) { toast("Please fill in Reporter and Title"); return; }
+
+  const allSet = Object.values(scores).every(v => v > 0);
+  if (!allSet && !confirm("Some impact scores are missing. Submit anyway?")) return;
+
+  const weighted = calcScore();
+  const pct      = weighted !== null ? weighted / MAX_SCORE : null;
+  const scoreVal = pct !== null ? Math.round(pct * 100) / 10 : "";
+
+  const payload = {
+    submitted:  new Date().toLocaleDateString("en-GB"),
+    reporter,
+    title,
+    account:    document.getElementById("account").value,
+    feature:    document.getElementById("feature").value.trim(),
+    desc:       document.getElementById("desc").value.trim(),
+    d1: scores.d1 || "", d2: scores.d2 || "", d3: scores.d3 || "",
+    d4: scores.d4 || "", d5: scores.d5 || "",
+    score:      scoreVal,
+    priority:   getPriority(),
+    workaround: document.getElementById("workaround").value.trim(),
+    repro:      document.getElementById("repro").value.trim(),
   };
 
-  dash.innerHTML = `
-    <div class="page-header">
-      <div class="page-header-left">
-        <div class="rep-name">${rep.rep.name}</div>
-        <div class="page-sub">Updated ${DATA.generated_date} · This quarter vs last quarter</div>
-      </div>
-      <div class="period-tabs">
-        ${['week','month','quarter','last_quarter','year','compare'].map(p => `
-          <button class="period-tab ${p === currentPeriod ? 'active' : ''}" onclick="selectPeriod('${p}')">${p === 'compare' ? 'Q vs Q' : PERIOD_LABELS[p]}</button>
-        `).join('')}
-      </div>
-    </div>
+  const btn = document.getElementById("submit-btn");
+  btn.textContent = "Submitting…"; btn.disabled = true;
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem">
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem">
-        <div style="font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem">Q3 2026 — current</div>
-        ${STAT_CONFIG.map(s => `
-          <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--border)">
-            <span style="font-size:12px;color:var(--muted)">${s.label}</span>
-            <span style="font-size:14px;font-weight:600;color:var(--text)">${cq[s.key] ?? 0}${delta(cq[s.key]??0, lq[s.key]??0)}</span>
-          </div>`).join('')}
-      </div>
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem">
-        <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem">Q2 2026 — last quarter</div>
-        ${STAT_CONFIG.map(s => `
-          <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--border)">
-            <span style="font-size:12px;color:var(--muted)">${s.label}</span>
-            <span style="font-size:14px;font-weight:600;color:var(--muted)">${lq[s.key] ?? 0}</span>
-          </div>`).join('')}
-      </div>
-    </div>
-
-    <div class="chart-section">
-      <div class="chart-header">
-        <div class="chart-title">Quarter vs quarter — all metrics</div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div class="chart-legend">
-            <div class="legend-item"><div class="legend-dot" style="background:#4f7cff"></div>Q3 2026</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#374151"></div>Q2 2026</div>
-          </div>
-          <div style="display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:3px">
-            <button onclick="setChartType('bar')" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='bar'?'var(--card)':'transparent'};color:${currentChartType==='bar'?'var(--text)':'var(--muted)'}">Bar</button>
-            <button onclick="setChartType('pie')" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='pie'?'var(--card)':'transparent'};color:${currentChartType==='pie'?'var(--text)':'var(--muted)'}">Pie</button>
-          </div>
-        </div>
-      </div>
-      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
-    </div>
-
-    <div class="page-footer">
-      <div class="footer-text">BidMachine Supply Sales Dashboard · data via HubSpot API</div>
-      <a class="footer-link" href="https://app.hubspot.com/contacts/5606823/objects/0-3/?hubspot_owner_id=${rep.rep.id}" target="_blank" rel="noopener">View in HubSpot ↗</a>
-    </div>`;
-
-  if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
-  const ctx = document.getElementById('activity-chart');
-  if (!ctx || !cd) return;
-
-  if (currentChartType === 'pie') {
-    // Pie shows current quarter breakdown by metric
-    const labels = ['Deals touched','New deals','Qual. out','Meetings','LinkedIn','New cos','Tier 1 DAU','Peer SDK'];
-    const values = [cq.deals_touched, cq.new_deals, cq.qualified_out, cq.meetings, cq.linkedin, cq.new_companies, cq.dau_tier1_added, cq.peer_sdk];
-    const PIE_COLORS = ['#4f7cff','#34d399','#f87171','#a78bfa','#0ea5e9','#f59e0b','#6ee7b7','#c084fc'];
-    chartInstance = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels,
-        datasets: [{ data: values, backgroundColor: PIE_COLORS, borderColor: '#0f1117', borderWidth: 2 }],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'right', labels: { color: '#9ca3af', font: { size: 11 }, padding: 12, boxWidth: 12 } },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-      },
+  try {
+    // Apps Script requires no-cors for POST from HTML files opened locally
+    await fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
-  } else {
-    chartInstance = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: cd.labels,
-        datasets: [
-          { label: 'Q3 2026', data: cd.current,  backgroundColor: '#4f7cff', borderRadius: 4, borderSkipped: false },
-          { label: 'Q2 2026', data: cd.previous, backgroundColor: '#374151', borderRadius: 4, borderSkipped: false },
-        ],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-        scales: {
-          x: { grid: { color: '#2a2f45' }, ticks: { color: '#6b7280', font: { size: 11 } } },
-          y: { grid: { color: '#2a2f45' }, ticks: { color: '#6b7280', font: { size: 11 }, precision: 0 }, beginAtZero: true },
-        },
-      },
-    });
+
+    toast(`✓ Submitted — ${payload.priority} priority`);
+    clearForm();
+    // Wait a moment then refresh so the new entry appears
+    setTimeout(refreshLog, 1500);
+  } catch (err) {
+    toast("✗ Submission failed — check your connection");
+    console.error(err);
+  } finally {
+    btn.textContent = "Submit to Google Sheets"; btn.disabled = false;
   }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// FETCH LOG FROM GOOGLE SHEETS
+// ═══════════════════════════════════════════════════════════════════════════
 
-function closeDrawer() {
-  document.getElementById('drawer-overlay').classList.remove('open');
-  document.getElementById('drawer').classList.remove('open');
+async function refreshLog() {
+  const url = getScriptUrl();
+  if (!url) return;
+
+  document.getElementById("log-list").innerHTML = `<div class="log-loading"><div class="spinner"></div>Loading from Sheets…</div>`;
+  document.getElementById("status-dot").className = "status-dot loading";
+  document.getElementById("status-text").textContent = "Fetching…";
+
+  try {
+    const res  = await fetch(url + "?t=" + Date.now()); // cache-bust
+    const data = await res.json();
+    cachedEntries = data.entries || [];
+    renderLog(cachedEntries);
+    updateBanner("connected", `Connected · ${cachedEntries.length} entries`);
+    document.getElementById("log-count").textContent =
+      cachedEntries.length === 1 ? "1 entry" : `${cachedEntries.length} entries`;
+  } catch (err) {
+    updateBanner("error", "Could not reach the Apps Script. Check the URL and deployment settings.");
+    document.getElementById("log-list").innerHTML = `<div class="log-empty"><div class="log-empty-icon">✗</div><p>Could not load entries.<br>Check the URL and try refreshing.</p></div>`;
+    console.error(err);
+  }
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+// ═══════════════════════════════════════════════════════════════════════════
+// RENDER LOG
+// ═══════════════════════════════════════════════════════════════════════════
 
-function showAddRepInfo() {
-  document.getElementById('drawer-title').textContent = 'Add a sales rep';
-  document.getElementById('drawer-count').textContent = '';
-  document.getElementById('drawer-body').innerHTML = `
-    <div class="drawer-item" style="border:none">
-      <div style="font-size:13px;color:var(--muted);line-height:1.7">
-        <p style="margin-bottom:12px">To add another rep to this dashboard:</p>
-        <ol style="padding-left:1.2rem;display:flex;flex-direction:column;gap:8px">
-          <li>Open <code style="background:var(--card);padding:2px 6px;border-radius:4px">fetch_data.py</code></li>
-          <li>Find their HubSpot owner ID (ask Claude or check HubSpot)</li>
-          <li>Add a line to the <code style="background:var(--card);padding:2px 6px;border-radius:4px">REPS</code> list:<br>
-            <code style="background:var(--card);padding:4px 8px;border-radius:4px;display:block;margin-top:6px">{"id": "OWNER_ID", "name": "Full Name"}</code>
-          </li>
-          <li>Run <code style="background:var(--card);padding:2px 6px;border-radius:4px">python fetch_data.py</code> and push</li>
-        </ol>
+function renderLog(entries) {
+  const list = document.getElementById("log-list");
+  if (!entries || entries.length === 0) {
+    list.innerHTML = `<div class="log-empty"><div class="log-empty-icon">◻</div><p>No submissions yet.<br>Be the first to log an issue.</p></div>`;
+    return;
+  }
+  list.innerHTML = entries.map(e => {
+    const priority = e["Priority"] || e.priority || "—";
+    const title    = e["Title"]    || e.title    || "Untitled";
+    const reporter = e["Reporter"] || e.reporter || "";
+    const account  = e["Account"]  || e.account  || "";
+    const score    = e["Score /10"]|| e.score    || "—";
+    const submitted= e["Submitted"]|| e.submitted|| "";
+    const badgeCls = priority==="Low"?"badge-low":priority==="Medium"?"badge-med":priority==="High"?"badge-high":"badge-none";
+    return `
+      <div class="log-entry" onclick='loadEntry(${JSON.stringify(e)})'>
+        <div class="log-entry-top">
+          <span class="log-entry-num">${submitted}</span>
+          <span class="log-entry-title">${title}</span>
+          <span class="log-badge ${badgeCls}">${priority}</span>
+        </div>
+        <div class="log-entry-meta">
+          ${reporter ? `<span class="log-meta-chip">${reporter}</span>` : ""}
+          ${account  ? `<span class="log-meta-chip">${account}</span>`  : ""}
+          <span class="log-meta-chip">Score ${score}/10</span>
+        </div>
+        <div class="log-load-hint">click to load →</div>
       </div>
-    </div>`;
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('drawer').classList.add('open');
+    `;
+  }).join("");
 }
 
-boot();
+// ═══════════════════════════════════════════════════════════════════════════
+// LOAD ENTRY INTO FORM
+// ═══════════════════════════════════════════════════════════════════════════
+
+function loadEntry(e) {
+  document.getElementById("reporter").value   = e["Reporter"]   || e.reporter   || "";
+  document.getElementById("date").value       = e["Submitted"]  || e.submitted  || "";
+  document.getElementById("title").value      = e["Title"]      || e.title      || "";
+  document.getElementById("account").value    = e["Account"]    || e.account    || "";
+  document.getElementById("feature").value    = e["Feature"]    || e.feature    || "";
+  document.getElementById("desc").value       = e["Description"]|| e.desc       || "";
+  document.getElementById("workaround").value = e["Workaround"] || e.workaround || "";
+  document.getElementById("repro").value      = e["Repro Steps"]|| e.repro      || "";
+
+  const dimMap = { d1:"D1 Client Visibility", d2:"D2 Frequency", d3:"D3 Effort", d4:"D4 Brand Risk", d5:"D5 Security" };
+  Object.entries(dimMap).forEach(([key, col]) => {
+    const v = parseInt(e[col] || e[key]) || 0;
+    scores[key] = v;
+    document.querySelectorAll(`.pill-btn[data-dim="${key}"]`).forEach(p => {
+      p.classList.remove("sel-1","sel-2","sel-3");
+      if (p.dataset.val == v) p.classList.add(`sel-${v}`);
+    });
+  });
+
+  updateVerdict();
+  document.querySelector(".form-panel").scrollTo({ top: 0, behavior: "smooth" });
+  toast("Entry loaded — edit and resubmit as new");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CLEAR FORM
+// ═══════════════════════════════════════════════════════════════════════════
+
+function clearForm() {
+  ["reporter","date","title","account","feature","desc","workaround","repro"]
+    .forEach(id => { document.getElementById(id).value = ""; });
+  Object.keys(scores).forEach(k => scores[k] = 0);
+  document.querySelectorAll(".pill-btn").forEach(p => p.classList.remove("sel-1","sel-2","sel-3"));
+  updateVerdict();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// EXPORT CSV (from cached entries)
+// ═══════════════════════════════════════════════════════════════════════════
+
+function exportCSV() {
+  if (!cachedEntries.length) { toast("No entries to export — refresh first"); return; }
+  const headers = Object.keys(cachedEntries[0]);
+  const rows    = cachedEntries.map(e => headers.map(h => `"${String(e[h]||"").replace(/"/g,'""')}"`).join(","));
+  const csv     = [headers.join(","), ...rows].join("\n");
+  const blob    = new Blob([csv], { type:"text/csv" });
+  const a       = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "issue_log.csv" });
+  a.click(); URL.revokeObjectURL(a.href);
+  toast("CSV exported");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════════════════════════════════
+
+function toast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 3000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════════
+
+buildScoreBlock();
+
+// Pre-fill URL if saved, and auto-connect
+updateBanner("connecting");
+refreshLog();
 </script>
+
+<iframe name="hidden_iframe" style="display:none"></iframe>
 </body>
 </html>
