@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T16:02:54Z",
-  "generated_date": "08 Jul 2026, 16:02 UTC",
+  "generated_at": "2026-07-08T19:22:06Z",
+  "generated_date": "08 Jul 2026, 19:22 UTC",
   "reps": [
     {
       "rep": {
@@ -10,7 +10,7 @@
       "periods": {
         "week": {
           "stats": {
-            "deals_touched": 7,
+            "deals_touched": 15,
             "new_deals": 1,
             "qualified_out": 2,
             "meetings": 2,
@@ -20,7 +20,8 @@
             "dau_tier1_added": 6,
             "peer_sdk": 0,
             "stage_progressed": 1,
-            "ooo_days": 0
+            "ooo_days": 0,
+            "emails": 20
           },
           "detail": {
             "deals_touched": [
@@ -114,6 +115,102 @@
                 "dau_us": null,
                 "prev_stage": "Sales Prospecting",
                 "prev_stage_id": "1855526"
+              },
+              {
+                "id": "email_Indirect | Parthenon EY",
+                "name": "Indirect | Parthenon EY",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-04",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Pleasure City",
+                "name": "Indirect | Pleasure City",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | InDrive (SUOL)",
+                "name": "Indirect | InDrive (SUOL)",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Viber",
+                "name": "Indirect | Viber",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | What3words",
+                "name": "Indirect | What3words",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Minute Media",
+                "name": "Indirect | Minute Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-02",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Muzz LTD",
+                "name": "Indirect | Muzz LTD",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-01",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect Influent Media",
+                "name": "Indirect Influent Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
               }
             ],
             "new_deals": [
@@ -264,7 +361,7 @@
                 "title": "Paramount",
                 "date": "2026-07-02",
                 "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Own Conduit integration layer into Magnite/AdX. Next: ops/tech call."
+                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
               },
               {
                 "id": "m10",
@@ -400,7 +497,7 @@
         },
         "month": {
           "stats": {
-            "deals_touched": 13,
+            "deals_touched": 23,
             "new_deals": 2,
             "qualified_out": 8,
             "meetings": 5,
@@ -410,7 +507,8 @@
             "dau_tier1_added": 7,
             "peer_sdk": 0,
             "stage_progressed": 1,
-            "ooo_days": 6
+            "ooo_days": 6,
+            "emails": 23
           },
           "detail": {
             "deals_touched": [
@@ -582,6 +680,126 @@
                 "dau_us": null,
                 "prev_stage": "Sales Qualified Lead",
                 "prev_stage_id": "1574904"
+              },
+              {
+                "id": "email_Indirect Influent Media",
+                "name": "Indirect Influent Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | What3words",
+                "name": "Indirect | What3words",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Minute Media",
+                "name": "Indirect | Minute Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-29",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Hero Fighting Games",
+                "name": "Indirect | Hero Fighting Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-25",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Likee",
+                "name": "Indirect | Likee",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-26",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Tech Tree",
+                "name": "Tech Tree",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-12",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Zubeyda / DIJITAL ELMA",
+                "name": "Zubeyda / DIJITAL ELMA",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-10",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Mage Games",
+                "name": "Indirect | Mage Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-09",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | CyanAds",
+                "name": "Indirect | CyanAds",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-01",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Lootcopter",
+                "name": "Indirect | Lootcopter",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-18",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
               }
             ],
             "new_deals": [
@@ -922,7 +1140,7 @@
                 "title": "Beeler Tech",
                 "date": "2026-06-10",
                 "outcome": "COMPLETED",
-                "notes": "9 contacts logged. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
+                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
               },
               {
                 "id": "lq8",
@@ -1104,7 +1322,7 @@
         },
         "quarter": {
           "stats": {
-            "deals_touched": 32,
+            "deals_touched": 39,
             "new_deals": 3,
             "qualified_out": 5,
             "meetings": 7,
@@ -1114,7 +1332,8 @@
             "dau_tier1_added": 25,
             "peer_sdk": 2,
             "stage_progressed": 7,
-            "ooo_days": 0
+            "ooo_days": 0,
+            "emails": 29
           },
           "detail": {
             "deals_touched": [
@@ -1533,6 +1752,90 @@
                 "dau_us": null,
                 "prev_stage": "Sales Prospecting",
                 "prev_stage_id": "1855526"
+              },
+              {
+                "id": "email_Indirect | Parthenon EY",
+                "name": "Indirect | Parthenon EY",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-08",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | InDrive (SUOL)",
+                "name": "Indirect | InDrive (SUOL)",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Aniview & BidMachine",
+                "name": "Aniview & BidMachine",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Luma AI",
+                "name": "Indirect | Luma AI",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Nordcurrent",
+                "name": "Indirect | Nordcurrent",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Mia from Sliide",
+                "name": "Mia from Sliide",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | byglasslabs.io",
+                "name": "Indirect | byglasslabs.io",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
               }
             ],
             "new_deals": [
@@ -2112,7 +2415,7 @@
                 "title": "Paramount",
                 "date": "2026-07-02",
                 "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Own Conduit integration layer into Magnite/AdX. Next: ops/tech call."
+                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
               },
               {
                 "id": "m10",
@@ -2627,7 +2930,7 @@
         },
         "last_quarter": {
           "stats": {
-            "deals_touched": 18,
+            "deals_touched": 28,
             "new_deals": 13,
             "qualified_out": 13,
             "meetings": 8,
@@ -2637,7 +2940,8 @@
             "dau_tier1_added": 12,
             "peer_sdk": 2,
             "stage_progressed": 1,
-            "ooo_days": 6
+            "ooo_days": 6,
+            "emails": 23
           },
           "detail": {
             "deals_touched": [
@@ -2874,6 +3178,126 @@
                 "dau_us": null,
                 "prev_stage": "Sales Qualified Lead",
                 "prev_stage_id": "1574904"
+              },
+              {
+                "id": "email_Indirect Influent Media",
+                "name": "Indirect Influent Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | What3words",
+                "name": "Indirect | What3words",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Minute Media",
+                "name": "Indirect | Minute Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-29",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Hero Fighting Games",
+                "name": "Indirect | Hero Fighting Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-25",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Likee",
+                "name": "Indirect | Likee",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-26",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Tech Tree",
+                "name": "Tech Tree",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-12",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Zubeyda / DIJITAL ELMA",
+                "name": "Zubeyda / DIJITAL ELMA",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-10",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Mage Games",
+                "name": "Indirect | Mage Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-09",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | CyanAds",
+                "name": "Indirect | CyanAds",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-01",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Lootcopter",
+                "name": "Indirect | Lootcopter",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-18",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
               }
             ],
             "new_deals": [
@@ -3487,7 +3911,7 @@
                 "title": "Venatus (Sam)",
                 "date": "2026-05-19",
                 "outcome": "COMPLETED",
-                "notes": "No direct app inventory. Two channels: Google MCN and curation via Index Exchange."
+                "notes": "No direct app inventory. Two channels: Google MCN and Index Exchange."
               },
               {
                 "id": "lq5",
@@ -3508,7 +3932,7 @@
                 "title": "Beeler Tech",
                 "date": "2026-06-10",
                 "outcome": "COMPLETED",
-                "notes": "9 contacts logged. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
+                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
               },
               {
                 "id": "lq8",
@@ -3803,7 +4227,7 @@
         },
         "year": {
           "stats": {
-            "deals_touched": 50,
+            "deals_touched": 64,
             "new_deals": 39,
             "qualified_out": 18,
             "meetings": 18,
@@ -3813,7 +4237,8 @@
             "dau_tier1_added": 37,
             "peer_sdk": 12,
             "stage_progressed": 8,
-            "ooo_days": 6
+            "ooo_days": 6,
+            "emails": 52
           },
           "detail": {
             "deals_touched": [
@@ -4466,6 +4891,174 @@
                 "dau_us": null,
                 "prev_stage": "Sales Qualified Lead",
                 "prev_stage_id": "1574904"
+              },
+              {
+                "id": "email_Indirect | Parthenon EY",
+                "name": "Indirect | Parthenon EY",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-08",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | InDrive (SUOL)",
+                "name": "Indirect | InDrive (SUOL)",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect Influent Media",
+                "name": "Indirect Influent Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Aniview & BidMachine",
+                "name": "Aniview & BidMachine",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Luma AI",
+                "name": "Indirect | Luma AI",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Nordcurrent",
+                "name": "Indirect | Nordcurrent",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Mia from Sliide",
+                "name": "Mia from Sliide",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | byglasslabs.io",
+                "name": "Indirect | byglasslabs.io",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Hero Fighting Games",
+                "name": "Indirect | Hero Fighting Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-25",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Likee",
+                "name": "Indirect | Likee",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-26",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Zubeyda / DIJITAL ELMA",
+                "name": "Zubeyda / DIJITAL ELMA",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-10",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Mage Games",
+                "name": "Indirect | Mage Games",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-09",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | CyanAds",
+                "name": "Indirect | CyanAds",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-01",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Lootcopter",
+                "name": "Indirect | Lootcopter",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-18",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
               }
             ],
             "new_deals": [
@@ -5937,7 +6530,7 @@
                 "title": "Paramount",
                 "date": "2026-07-02",
                 "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Own Conduit integration layer into Magnite/AdX. Next: ops/tech call."
+                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
               },
               {
                 "id": "m10",
@@ -5972,7 +6565,7 @@
                 "title": "Venatus (Sam)",
                 "date": "2026-05-19",
                 "outcome": "COMPLETED",
-                "notes": "No direct app inventory. Two channels: Google MCN and curation via Index Exchange."
+                "notes": "No direct app inventory. Two channels: Google MCN and Index Exchange."
               },
               {
                 "id": "lq5",
@@ -5993,7 +6586,7 @@
                 "title": "Beeler Tech",
                 "date": "2026-06-10",
                 "outcome": "COMPLETED",
-                "notes": "9 contacts logged. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
+                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
               },
               {
                 "id": "lq8",
@@ -6973,7 +7566,7 @@
             "Progressed"
           ],
           "current": [
-            32,
+            39,
             3,
             5,
             7,
@@ -6984,7 +7577,7 @@
             7
           ],
           "previous": [
-            18,
+            28,
             13,
             13,
             8,
