@@ -176,12 +176,12 @@ let chartInstance = null;
 const PERIOD_LABELS = { quarter: 'This quarter', last_quarter: 'Last quarter', year: 'Year to date' };
 
 const STAT_CONFIG = [
-  { key: 'deals_touched',   label: 'Deals touched',          color: '#4f7cff', detail: 'deals_touched' },
-  { key: 'new_deals',       label: 'New deals',               color: '#34d399', detail: 'new_deals' },
+{ key: 'deals_touched',   label: 'Deals Working',          color: '#4f7cff', detail: 'deals_touched' },
+  { key: 'meetings',        label: 'Meetings',                color: '#a78bfa', detail: 'meetings' },
+  { key: 'new_deals',       label: 'New Deals Created',               color: '#34d399', detail: 'new_deals' },
   { key: 'stage_progressed',label: 'Deals progressed',        color: '#818cf8', detail: 'stage_progressed' },
   { key: 'qualified_out',   label: 'Qualified out',           color: '#f87171', detail: 'qualified_out' },
-  { key: 'meetings',        label: 'Meetings',                color: '#a78bfa', detail: 'meetings' },
-  { key: 'new_companies',   label: 'New companies',           color: '#f59e0b', detail: 'new_companies' },
+  { key: 'new_companies',   label: 'New Companies Created',           color: '#f59e0b', detail: 'new_companies' },
   { key: 'dau_tier1_added', label: 'Deals with Tier 1 DAU',   color: '#6ee7b7', detail: 'dau_tier1_added' },
   { key: 'peer_sdk',        label: 'Peer SDK qualified',      color: '#c084fc', detail: 'peer_sdk' },
 ];
@@ -316,8 +316,8 @@ function renderChart(rep) {
       data: {
         labels: cd.labels,
         datasets: [
-          { label: 'Deals touched', data: cd.deals,     backgroundColor: '#4f7cff', borderRadius: 4, borderSkipped: false },
-          { label: 'New deals',     data: cd.new_deals,  backgroundColor: '#34d399', borderRadius: 4, borderSkipped: false },
+          { label: 'Deals Working', data: cd.deals,     backgroundColor: '#4f7cff', borderRadius: 4, borderSkipped: false },
+          { label: 'New Deals Created',     data: cd.new_deals,  backgroundColor: '#34d399', borderRadius: 4, borderSkipped: false },
           { label: 'Meetings',      data: cd.meetings,   backgroundColor: '#a78bfa', borderRadius: 4, borderSkipped: false },
         ],
       },
