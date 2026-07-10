@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T19:22:06Z",
-  "generated_date": "08 Jul 2026, 19:22 UTC",
+  "generated_at": "2026-07-10T14:17:25Z",
+  "generated_date": "10 Jul 2026, 14:17 UTC",
   "reps": [
     {
       "rep": {
@@ -8,1332 +8,18 @@
         "name": "Dan Owens"
       },
       "periods": {
-        "week": {
-          "stats": {
-            "deals_touched": 15,
-            "new_deals": 1,
-            "qualified_out": 2,
-            "meetings": 2,
-            "linkedin": 1,
-            "new_companies": 2,
-            "dau_us_added": 0,
-            "dau_tier1_added": 6,
-            "peer_sdk": 0,
-            "stage_progressed": 1,
-            "ooo_days": 0,
-            "emails": 20
-          },
-          "detail": {
-            "deals_touched": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-29",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725741170",
-                "name": "Indirect | Rakuten",
-                "amount": 4330629,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725741170",
-                "dau_tier1": 8919418,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "57392746260",
-                "name": "Indirect | BeReal",
-                "amount": 4742616,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57392746260",
-                "dau_tier1": 5674120,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45982477850",
-                "name": "Indirect | Badoo Software",
-                "amount": 2510680,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45982477850",
-                "dau_tier1": 1494519,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "57389803862",
-                "name": "Indirect | Bumble",
-                "amount": 152442,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57389803862",
-                "dau_tier1": 732,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725714776",
-                "name": "Indirect | Sky",
-                "amount": 8455152,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725714776",
-                "dau_tier1": 15000000,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "34811011880",
-                "name": "Tech Tree",
-                "amount": 42444,
-                "stage": "Sales Proposal",
-                "stage_id": "961283",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/34811011880",
-                "dau_tier1": 40247,
-                "dau_us": null,
-                "prev_stage": "Sales Prospecting",
-                "prev_stage_id": "1855526"
-              },
-              {
-                "id": "email_Indirect | Parthenon EY",
-                "name": "Indirect | Parthenon EY",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-04",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Pleasure City",
-                "name": "Indirect | Pleasure City",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | InDrive (SUOL)",
-                "name": "Indirect | InDrive (SUOL)",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Viber",
-                "name": "Indirect | Viber",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | What3words",
-                "name": "Indirect | What3words",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Minute Media",
-                "name": "Indirect | Minute Media",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-02",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Muzz LTD",
-                "name": "Indirect | Muzz LTD",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-01",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect Influent Media",
-                "name": "Indirect Influent Media",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "new_deals": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-29",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "qualified_out": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "57392746260",
-                "name": "Indirect | BeReal",
-                "amount": 4742616,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-05-27",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57392746260",
-                "dau_tier1": 5674120,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "stage_summary": {
-              "Sales Qualified Out": [
-                {
-                  "id": "61750324636",
-                  "name": "Indirect | Yango Ads",
-                  "amount": null,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-29",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "57392746260",
-                  "name": "Indirect | BeReal",
-                  "amount": 4742616,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57392746260",
-                  "dau_tier1": 5674120,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                }
-              ],
-              "Lead with Peer SDK": [
-                {
-                  "id": "59725741170",
-                  "name": "Indirect | Rakuten",
-                  "amount": 4330629,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725741170",
-                  "dau_tier1": 8919418,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "45982477850",
-                  "name": "Indirect | Badoo Software",
-                  "amount": 2510680,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45982477850",
-                  "dau_tier1": 1494519,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "57389803862",
-                  "name": "Indirect | Bumble",
-                  "amount": 152442,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57389803862",
-                  "dau_tier1": 732,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "59725714776",
-                  "name": "Indirect | Sky",
-                  "amount": 8455152,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725714776",
-                  "dau_tier1": 15000000,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                }
-              ],
-              "Sales Proposal": [
-                {
-                  "id": "34811011880",
-                  "name": "Tech Tree",
-                  "amount": 42444,
-                  "stage": "Sales Proposal",
-                  "stage_id": "961283",
-                  "date": "2026-07-05",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/34811011880",
-                  "dau_tier1": 40247,
-                  "dau_us": null,
-                  "prev_stage": "Sales Prospecting",
-                  "prev_stage_id": "1855526"
-                }
-              ]
-            },
-            "meetings": [
-              {
-                "id": "m9",
-                "title": "Paramount",
-                "date": "2026-07-02",
-                "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
-              },
-              {
-                "id": "m10",
-                "title": "Dan / Zach / Alex lunch",
-                "date": "2026-07-01",
-                "outcome": "",
-                "notes": ""
-              }
-            ],
-            "linkedin": [
-              {
-                "id": "n4",
-                "date": "2026-07-03",
-                "text": "LinkedIn reply from InDrive: Thanks for reaching out Dan \u2014 could you email details about adding BidMachine demand?"
-              }
-            ],
-            "new_companies": [
-              {
-                "id": "c4",
-                "name": "DN Capital",
-                "domain": "dncapital.com",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/c4"
-              },
-              {
-                "id": "c5",
-                "name": "Suol Innovations (InDrive)",
-                "domain": "indriver.com",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/c5"
-              }
-            ],
-            "dau_us_added": [],
-            "dau_tier1_added": [
-              {
-                "id": "59725741170",
-                "name": "Indirect | Rakuten",
-                "amount": 4330629,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725741170",
-                "dau_tier1": 8919418,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "57392746260",
-                "name": "Indirect | BeReal",
-                "amount": 4742616,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57392746260",
-                "dau_tier1": 5674120,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45982477850",
-                "name": "Indirect | Badoo Software",
-                "amount": 2510680,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45982477850",
-                "dau_tier1": 1494519,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "57389803862",
-                "name": "Indirect | Bumble",
-                "amount": 152442,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57389803862",
-                "dau_tier1": 732,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725714776",
-                "name": "Indirect | Sky",
-                "amount": 8455152,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725714776",
-                "dau_tier1": 15000000,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "34811011880",
-                "name": "Tech Tree",
-                "amount": 42444,
-                "stage": "Sales Proposal",
-                "stage_id": "961283",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/34811011880",
-                "dau_tier1": 40247,
-                "dau_us": null,
-                "prev_stage": "Sales Prospecting",
-                "prev_stage_id": "1855526"
-              }
-            ],
-            "peer_sdk": [],
-            "stage_progressed": [
-              {
-                "id": "34811011880",
-                "name": "Tech Tree",
-                "amount": 42444,
-                "stage": "Sales Proposal",
-                "stage_id": "961283",
-                "date": "2026-07-05",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/34811011880",
-                "dau_tier1": 40247,
-                "dau_us": null,
-                "prev_stage": "Sales Prospecting",
-                "prev_stage_id": "1855526",
-                "progression": "Sales Prospecting \u2192 Sales Proposal"
-              }
-            ],
-            "ooo": []
-          }
-        },
-        "month": {
-          "stats": {
-            "deals_touched": 23,
-            "new_deals": 2,
-            "qualified_out": 8,
-            "meetings": 5,
-            "linkedin": 0,
-            "new_companies": 4,
-            "dau_us_added": 0,
-            "dau_tier1_added": 7,
-            "peer_sdk": 0,
-            "stage_progressed": 1,
-            "ooo_days": 6,
-            "emails": 23
-          },
-          "detail": {
-            "deals_touched": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-29",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724784280",
-                "name": "Indirect | Channel 4",
-                "amount": 45311,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-26",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724784280",
-                "dau_tier1": 159357,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45974947895",
-                "name": "Indirect | Disney",
-                "amount": 5689980,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45974947895",
-                "dau_tier1": 1159159,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725747570",
-                "name": "Indirect | NBCUniversal",
-                "amount": 783335,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725747570",
-                "dau_tier1": 1620946,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60135565222",
-                "name": "hubx",
-                "amount": 27763,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60135565222",
-                "dau_tier1": 100000,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60650544716",
-                "name": "Indirect | OLX Group",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60650544716",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724816683",
-                "name": "Indirect | Gram Games",
-                "amount": 227303,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-17",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724816683",
-                "dau_tier1": 171560,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "61024719419",
-                "name": "Indirect | Fever Labs",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-16",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61024719419",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725772813",
-                "name": "Indirect | Uber",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-12",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725772813",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724769541",
-                "name": "Indirect | Overwolf",
-                "amount": 7798,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-11",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724769541",
-                "dau_tier1": 6138,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45978573572",
-                "name": "Indirect | CNN Interactive",
-                "amount": 228523,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45978573572",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60075512157_lq",
-                "name": "Indirect | Trade House Media",
-                "amount": 154442,
-                "stage": "Sales Prospecting",
-                "stage_id": "1855526",
-                "date": "2026-06-15",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60075512157_lq",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": "Lead with Peer SDK",
-                "prev_stage_id": "1343040315"
-              },
-              {
-                "id": "60019213915_lq",
-                "name": "Indirect | Match Media Group",
-                "amount": 2930730,
-                "stage": "Sales Prospecting",
-                "stage_id": "1855526",
-                "date": "2026-06-20",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60019213915_lq",
-                "dau_tier1": 4400000,
-                "dau_us": null,
-                "prev_stage": "Sales Qualified Lead",
-                "prev_stage_id": "1574904"
-              },
-              {
-                "id": "email_Indirect Influent Media",
-                "name": "Indirect Influent Media",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | What3words",
-                "name": "Indirect | What3words",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Minute Media",
-                "name": "Indirect | Minute Media",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-29",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Hero Fighting Games",
-                "name": "Indirect | Hero Fighting Games",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Likee",
-                "name": "Indirect | Likee",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-26",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Tech Tree",
-                "name": "Tech Tree",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-12",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Zubeyda / DIJITAL ELMA",
-                "name": "Zubeyda / DIJITAL ELMA",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Mage Games",
-                "name": "Indirect | Mage Games",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-09",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | CyanAds",
-                "name": "Indirect | CyanAds",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-01",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect | Lootcopter",
-                "name": "Indirect | Lootcopter",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-18",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "new_deals": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-29",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "61024719419",
-                "name": "Indirect | Fever Labs",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61024719419",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "qualified_out": [
-              {
-                "id": "61750324636",
-                "name": "Indirect | Yango Ads",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60135565222",
-                "name": "hubx",
-                "amount": 27763,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60135565222",
-                "dau_tier1": 100000,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60650544716",
-                "name": "Indirect | OLX Group",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60650544716",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724816683",
-                "name": "Indirect | Gram Games",
-                "amount": 227303,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-05-13",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724816683",
-                "dau_tier1": 171560,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "61024719419",
-                "name": "Indirect | Fever Labs",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61024719419",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725772813",
-                "name": "Indirect | Uber",
-                "amount": null,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-09-30",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725772813",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724769541",
-                "name": "Indirect | Overwolf",
-                "amount": 7798,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-11",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724769541",
-                "dau_tier1": 6138,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45978573572",
-                "name": "Indirect | CNN Interactive",
-                "amount": 228523,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45978573572",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              }
-            ],
-            "stage_summary": {
-              "Sales Qualified Out": [
-                {
-                  "id": "61750324636",
-                  "name": "Indirect | Yango Ads",
-                  "amount": null,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-29",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61750324636",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "60135565222",
-                  "name": "hubx",
-                  "amount": 27763,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-25",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60135565222",
-                  "dau_tier1": 100000,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "60650544716",
-                  "name": "Indirect | OLX Group",
-                  "amount": null,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-25",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60650544716",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "59724816683",
-                  "name": "Indirect | Gram Games",
-                  "amount": 227303,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-17",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724816683",
-                  "dau_tier1": 171560,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "61024719419",
-                  "name": "Indirect | Fever Labs",
-                  "amount": null,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-16",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61024719419",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "59725772813",
-                  "name": "Indirect | Uber",
-                  "amount": null,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-12",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725772813",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "59724769541",
-                  "name": "Indirect | Overwolf",
-                  "amount": 7798,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-11",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724769541",
-                  "dau_tier1": 6138,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "45978573572",
-                  "name": "Indirect | CNN Interactive",
-                  "amount": 228523,
-                  "stage": "Sales Qualified Out",
-                  "stage_id": "34415407",
-                  "date": "2026-06-10",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45978573572",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                }
-              ],
-              "Lead with Peer SDK": [
-                {
-                  "id": "59724784280",
-                  "name": "Indirect | Channel 4",
-                  "amount": 45311,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-06-26",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724784280",
-                  "dau_tier1": 159357,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "45974947895",
-                  "name": "Indirect | Disney",
-                  "amount": 5689980,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-06-25",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45974947895",
-                  "dau_tier1": 1159159,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                },
-                {
-                  "id": "59725747570",
-                  "name": "Indirect | NBCUniversal",
-                  "amount": 783335,
-                  "stage": "Lead with Peer SDK",
-                  "stage_id": "1343040315",
-                  "date": "2026-06-25",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725747570",
-                  "dau_tier1": 1620946,
-                  "dau_us": null,
-                  "prev_stage": null,
-                  "prev_stage_id": null
-                }
-              ],
-              "Sales Prospecting": [
-                {
-                  "id": "60075512157_lq",
-                  "name": "Indirect | Trade House Media",
-                  "amount": 154442,
-                  "stage": "Sales Prospecting",
-                  "stage_id": "1855526",
-                  "date": "2026-06-15",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60075512157_lq",
-                  "dau_tier1": null,
-                  "dau_us": null,
-                  "prev_stage": "Lead with Peer SDK",
-                  "prev_stage_id": "1343040315"
-                },
-                {
-                  "id": "60019213915_lq",
-                  "name": "Indirect | Match Media Group",
-                  "amount": 2930730,
-                  "stage": "Sales Prospecting",
-                  "stage_id": "1855526",
-                  "date": "2026-06-20",
-                  "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60019213915_lq",
-                  "dau_tier1": 4400000,
-                  "dau_us": null,
-                  "prev_stage": "Sales Qualified Lead",
-                  "prev_stage_id": "1574904"
-                }
-              ]
-            },
-            "meetings": [
-              {
-                "id": "lq1",
-                "title": "Trade House Media / Post Industria",
-                "date": "2026-06-04",
-                "outcome": "COMPLETED",
-                "notes": "They use Post Industria (Pubmatic SDK). Need ~$25K dev work."
-              },
-              {
-                "id": "lq2",
-                "title": "News Corp / Tim",
-                "date": "2026-06-02",
-                "outcome": "COMPLETED",
-                "notes": "Tim promoted to Head of Ops. Run in-house mediation GAM+TAM+Ozone."
-              },
-              {
-                "id": "lq3",
-                "title": "What3words product lead",
-                "date": "2026-06-01",
-                "outcome": "COMPLETED",
-                "notes": "Starting ad monetisation. Open to Q3 launch."
-              },
-              {
-                "id": "lq7",
-                "title": "Beeler Tech",
-                "date": "2026-06-10",
-                "outcome": "COMPLETED",
-                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
-              },
-              {
-                "id": "lq8",
-                "title": "Fandom / Noeleen Boyle",
-                "date": "2026-06-11",
-                "outcome": "COMPLETED",
-                "notes": "Intro via Beeler. Will connect to internal monetisation owner."
-              }
-            ],
-            "linkedin": [],
-            "new_companies": [
-              {
-                "id": "lc1",
-                "name": "What3words",
-                "domain": "what3words.com",
-                "date": "2026-06-01",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc1"
-              },
-              {
-                "id": "lc2",
-                "name": "Rail Delivery Group",
-                "domain": "raildeliverygroup.com",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc2"
-              },
-              {
-                "id": "lc3",
-                "name": "Bloomberg LP",
-                "domain": "bloomberg.com",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc3"
-              },
-              {
-                "id": "lc4",
-                "name": "Fever Labs",
-                "domain": "feverup.com",
-                "date": "2026-06-10",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc4"
-              }
-            ],
-            "dau_us_added": [],
-            "dau_tier1_added": [
-              {
-                "id": "59724784280",
-                "name": "Indirect | Channel 4",
-                "amount": 45311,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-26",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724784280",
-                "dau_tier1": 159357,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "45974947895",
-                "name": "Indirect | Disney",
-                "amount": 5689980,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45974947895",
-                "dau_tier1": 1159159,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59725747570",
-                "name": "Indirect | NBCUniversal",
-                "amount": 783335,
-                "stage": "Lead with Peer SDK",
-                "stage_id": "1343040315",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725747570",
-                "dau_tier1": 1620946,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60135565222",
-                "name": "hubx",
-                "amount": 27763,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-25",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60135565222",
-                "dau_tier1": 100000,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724816683",
-                "name": "Indirect | Gram Games",
-                "amount": 227303,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-17",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724816683",
-                "dau_tier1": 171560,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "59724769541",
-                "name": "Indirect | Overwolf",
-                "amount": 7798,
-                "stage": "Sales Qualified Out",
-                "stage_id": "34415407",
-                "date": "2026-06-11",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724769541",
-                "dau_tier1": 6138,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "60019213915_lq",
-                "name": "Indirect | Match Media Group",
-                "amount": 2930730,
-                "stage": "Sales Prospecting",
-                "stage_id": "1855526",
-                "date": "2026-06-20",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60019213915_lq",
-                "dau_tier1": 4400000,
-                "dau_us": null,
-                "prev_stage": "Sales Qualified Lead",
-                "prev_stage_id": "1574904"
-              }
-            ],
-            "peer_sdk": [],
-            "stage_progressed": [
-              {
-                "id": "60075512157_lq",
-                "name": "Indirect | Trade House Media",
-                "amount": 154442,
-                "stage": "Sales Prospecting",
-                "stage_id": "1855526",
-                "date": "2026-06-15",
-                "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60075512157_lq",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": "Lead with Peer SDK",
-                "prev_stage_id": "1343040315",
-                "progression": "Lead with Peer SDK \u2192 Sales Prospecting"
-              }
-            ],
-            "ooo": [
-              {
-                "date": "2026-06-17",
-                "note": "OOO"
-              },
-              {
-                "date": "2026-06-18",
-                "note": "OOO"
-              },
-              {
-                "date": "2026-06-19",
-                "note": "OOO"
-              },
-              {
-                "date": "2026-06-20",
-                "note": "OOO"
-              },
-              {
-                "date": "2026-06-23",
-                "note": "OOO"
-              },
-              {
-                "date": "2026-06-24",
-                "note": "OOO"
-              }
-            ]
-          }
-        },
         "quarter": {
           "stats": {
-            "deals_touched": 39,
+            "deals_touched": 41,
             "new_deals": 3,
             "qualified_out": 5,
-            "meetings": 7,
-            "linkedin": 1,
+            "meetings": 12,
             "new_companies": 5,
-            "dau_us_added": 0,
             "dau_tier1_added": 25,
             "peer_sdk": 2,
             "stage_progressed": 7,
             "ooo_days": 0,
-            "emails": 29
+            "emails": 33
           },
           "detail": {
             "deals_touched": [
@@ -1766,18 +452,6 @@
                 "prev_stage_id": null
               },
               {
-                "id": "email_Indirect | InDrive (SUOL)",
-                "name": "Indirect | InDrive (SUOL)",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
                 "id": "email_Aniview & BidMachine",
                 "name": "Aniview & BidMachine",
                 "amount": null,
@@ -1814,6 +488,18 @@
                 "prev_stage_id": null
               },
               {
+                "id": "email_Indirect | Mobupps",
+                "name": "Indirect | Mobupps",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
                 "id": "email_Mia from Sliide",
                 "name": "Mia from Sliide",
                 "amount": null,
@@ -1831,6 +517,30 @@
                 "amount": null,
                 "stage": "Email activity",
                 "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Orange One",
+                "name": "Indirect | Orange One",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | InDrive (SUOL)",
+                "name": "Indirect | InDrive (SUOL)",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
                 "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
                 "dau_tier1": null,
                 "dau_us": null,
@@ -2376,36 +1086,71 @@
             },
             "meetings": [
               {
+                "id": "m1",
+                "title": "Bidmachine | Muzz intro",
+                "date": "2026-07-10",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "m2",
+                "title": "Dan / Nikola Bidmachine | Peaksel",
+                "date": "2026-07-10",
+                "outcome": "COMPLETED",
+                "notes": "Nikola based in Serbia. Use Admob Waterfall & Bidding blended. Also trialing Google next gen SDK. Formats: nongaming Native/Interstitial, gaming Rewarded/Interstitial. Next steps: sharing contract with legal. Could be a good Beta waterfall partner."
+              },
+              {
+                "id": "m2b",
+                "title": "Dan, Emre & Hakan catch up",
+                "date": "2026-07-10",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "m3",
+                "title": "Bidmachine / Viber",
+                "date": "2026-07-09",
+                "outcome": "COMPLETED",
+                "notes": "Use GAM as adserver, 3 SDKs: Google, Meta & Liftoff. Liftoff generating \u00a31m per quarter. Viber Exchange plugged in via oRTB. 80% impressions programmatic, 20% direct. Ad mix: 70% native, 15% IBV, 15% mRec. 2 partners in pipe currently, would explore Q1 2027. Decision criteria: Revenue (MRG, integration fee, performance) and markets we can deliver in."
+              },
+              {
                 "id": "m4",
                 "title": "Minute Media / Elsa",
                 "date": "2026-07-08",
-                "outcome": "",
-                "notes": "Elsa said Axel Springer purchase has slowed commercial conversations."
+                "outcome": "COMPLETED",
+                "notes": "Elsa said Axel Springer purchase has slowed commercial conversations. Will need to wait for the dust to settle."
               },
               {
                 "id": "m5",
                 "title": "SoundCloud / Ben",
                 "date": "2026-07-08",
-                "outcome": "",
+                "outcome": "COMPLETED",
                 "notes": "Ben offered intro to head of monetisation. Very audio heavy vs display/video."
               },
               {
+                "id": "m5b",
+                "title": "Trade House Media / Sinclair update",
+                "date": "2026-07-09",
+                "outcome": "COMPLETED",
+                "notes": "Successfully re-pitched for Sinclair business. Looking to scope out \u00a325k SDK work."
+              },
+              {
                 "id": "m6",
-                "title": "Introduction BidMachine / Parthenon EY",
+                "title": "Introduction Bidmachine / Parthenon EY",
                 "date": "2026-07-07",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m7",
-                "title": "BidMachine | Minute Media",
+                "title": "Bidmachine | Minute Media",
                 "date": "2026-07-07",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m8",
-                "title": "Aniview & BidMachine",
+                "title": "Aniview & Bidmachine",
                 "date": "2026-07-06",
                 "outcome": "",
                 "notes": ""
@@ -2415,7 +1160,7 @@
                 "title": "Paramount",
                 "date": "2026-07-02",
                 "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
+                "notes": "CTV focus, Freewheel + Springserve stack. Own Conduit integration layer into Magnite/AdX. CTV mostly sold out. Next: ops/tech call."
               },
               {
                 "id": "m10",
@@ -2423,13 +1168,6 @@
                 "date": "2026-07-01",
                 "outcome": "",
                 "notes": ""
-              }
-            ],
-            "linkedin": [
-              {
-                "id": "n4",
-                "date": "2026-07-03",
-                "text": "LinkedIn reply from InDrive: Thanks for reaching out Dan \u2014 could you email details about adding BidMachine demand?"
               }
             ],
             "new_companies": [
@@ -2469,7 +1207,6 @@
                 "url": "https://app.hubspot.com/contacts/5606823/record/0-2/c5"
               }
             ],
-            "dau_us_added": [],
             "dau_tier1_added": [
               {
                 "id": "45994176365",
@@ -2930,18 +1667,16 @@
         },
         "last_quarter": {
           "stats": {
-            "deals_touched": 28,
+            "deals_touched": 29,
             "new_deals": 13,
             "qualified_out": 13,
             "meetings": 8,
-            "linkedin": 0,
             "new_companies": 7,
-            "dau_us_added": 0,
             "dau_tier1_added": 12,
             "peer_sdk": 2,
             "stage_progressed": 1,
             "ooo_days": 6,
-            "emails": 23
+            "emails": 24
           },
           "detail": {
             "deals_touched": [
@@ -3293,6 +2028,18 @@
                 "amount": null,
                 "stage": "Email activity",
                 "date": "2026-06-18",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Kleos",
+                "name": "Indirect | Kleos",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-12",
                 "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
                 "dau_tier1": null,
                 "dau_us": null,
@@ -3942,7 +2689,6 @@
                 "notes": "Intro via Beeler. Will connect to internal monetisation owner."
               }
             ],
-            "linkedin": [],
             "new_companies": [
               {
                 "id": "lc1",
@@ -3994,7 +2740,6 @@
                 "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc7"
               }
             ],
-            "dau_us_added": [],
             "dau_tier1_added": [
               {
                 "id": "59724784280",
@@ -4227,18 +2972,16 @@
         },
         "year": {
           "stats": {
-            "deals_touched": 64,
+            "deals_touched": 67,
             "new_deals": 39,
             "qualified_out": 18,
-            "meetings": 18,
-            "linkedin": 1,
+            "meetings": 21,
             "new_companies": 12,
-            "dau_us_added": 0,
             "dau_tier1_added": 37,
             "peer_sdk": 12,
             "stage_progressed": 8,
             "ooo_days": 6,
-            "emails": 52
+            "emails": 57
           },
           "detail": {
             "deals_touched": [
@@ -4905,30 +3648,6 @@
                 "prev_stage_id": null
               },
               {
-                "id": "email_Indirect | InDrive (SUOL)",
-                "name": "Indirect | InDrive (SUOL)",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-07-03",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
-                "id": "email_Indirect Influent Media",
-                "name": "Indirect Influent Media",
-                "amount": null,
-                "stage": "Email activity",
-                "date": "2026-06-30",
-                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
-                "dau_tier1": null,
-                "dau_us": null,
-                "prev_stage": null,
-                "prev_stage_id": null
-              },
-              {
                 "id": "email_Aniview & BidMachine",
                 "name": "Aniview & BidMachine",
                 "amount": null,
@@ -4965,6 +3684,18 @@
                 "prev_stage_id": null
               },
               {
+                "id": "email_Indirect | Mobupps",
+                "name": "Indirect | Mobupps",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-07",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
                 "id": "email_Mia from Sliide",
                 "name": "Mia from Sliide",
                 "amount": null,
@@ -4982,6 +3713,42 @@
                 "amount": null,
                 "stage": "Email activity",
                 "date": "2026-07-06",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Orange One",
+                "name": "Indirect | Orange One",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | InDrive (SUOL)",
+                "name": "Indirect | InDrive (SUOL)",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-07-03",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect Influent Media",
+                "name": "Indirect Influent Media",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-30",
                 "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
                 "dau_tier1": null,
                 "dau_us": null,
@@ -5054,6 +3821,18 @@
                 "amount": null,
                 "stage": "Email activity",
                 "date": "2026-06-18",
+                "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
+                "dau_tier1": null,
+                "dau_us": null,
+                "prev_stage": null,
+                "prev_stage_id": null
+              },
+              {
+                "id": "email_Indirect | Kleos",
+                "name": "Indirect | Kleos",
+                "amount": null,
+                "stage": "Email activity",
+                "date": "2026-06-12",
                 "url": "https://app.hubspot.com/contacts/5606823/objects/0-3/",
                 "dau_tier1": null,
                 "dau_us": null,
@@ -6470,57 +5249,78 @@
             },
             "meetings": [
               {
+                "id": "m0",
+                "title": "Dan / Marco (Bidmachine | Better Collective)",
+                "date": "2026-07-13",
+                "outcome": "",
+                "notes": ""
+              },
+              {
                 "id": "m1",
-                "title": "BidMachine | Muzz intro",
+                "title": "Bidmachine | Muzz intro",
                 "date": "2026-07-10",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m2",
-                "title": "Dan / Nikola BidMachine | Peaksel",
+                "title": "Dan / Nikola Bidmachine | Peaksel",
+                "date": "2026-07-10",
+                "outcome": "COMPLETED",
+                "notes": "Nikola based in Serbia. Use Admob Waterfall & Bidding blended. Also trialing Google next gen SDK. Formats: nongaming Native/Interstitial, gaming Rewarded/Interstitial. Next steps: sharing contract with legal. Could be a good Beta waterfall partner."
+              },
+              {
+                "id": "m2b",
+                "title": "Dan, Emre & Hakan catch up",
                 "date": "2026-07-10",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m3",
-                "title": "BidMachine / Viber",
+                "title": "Bidmachine / Viber",
                 "date": "2026-07-09",
-                "outcome": "",
-                "notes": ""
+                "outcome": "COMPLETED",
+                "notes": "Use GAM as adserver, 3 SDKs: Google, Meta & Liftoff. Liftoff generating \u00a31m per quarter. Viber Exchange plugged in via oRTB. 80% impressions programmatic, 20% direct. Ad mix: 70% native, 15% IBV, 15% mRec. 2 partners in pipe currently, would explore Q1 2027. Decision criteria: Revenue (MRG, integration fee, performance) and markets we can deliver in."
               },
               {
                 "id": "m4",
                 "title": "Minute Media / Elsa",
                 "date": "2026-07-08",
-                "outcome": "",
-                "notes": "Elsa said Axel Springer purchase has slowed commercial conversations."
+                "outcome": "COMPLETED",
+                "notes": "Elsa said Axel Springer purchase has slowed commercial conversations. Will need to wait for the dust to settle."
               },
               {
                 "id": "m5",
                 "title": "SoundCloud / Ben",
                 "date": "2026-07-08",
-                "outcome": "",
+                "outcome": "COMPLETED",
                 "notes": "Ben offered intro to head of monetisation. Very audio heavy vs display/video."
               },
               {
+                "id": "m5b",
+                "title": "Trade House Media / Sinclair update",
+                "date": "2026-07-09",
+                "outcome": "COMPLETED",
+                "notes": "Successfully re-pitched for Sinclair business. Looking to scope out \u00a325k SDK work."
+              },
+              {
                 "id": "m6",
-                "title": "Introduction BidMachine / Parthenon EY",
+                "title": "Introduction Bidmachine / Parthenon EY",
                 "date": "2026-07-07",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m7",
-                "title": "BidMachine | Minute Media",
+                "title": "Bidmachine | Minute Media",
                 "date": "2026-07-07",
                 "outcome": "",
                 "notes": ""
               },
               {
                 "id": "m8",
-                "title": "Aniview & BidMachine",
+                "title": "Aniview & Bidmachine",
                 "date": "2026-07-06",
                 "outcome": "",
                 "notes": ""
@@ -6530,7 +5330,7 @@
                 "title": "Paramount",
                 "date": "2026-07-02",
                 "outcome": "COMPLETED",
-                "notes": "CTV focus, Freewheel + Springserve stack. Next: ops/tech call."
+                "notes": "CTV focus, Freewheel + Springserve stack. Own Conduit integration layer into Magnite/AdX. CTV mostly sold out. Next: ops/tech call."
               },
               {
                 "id": "m10",
@@ -6594,13 +5394,6 @@
                 "date": "2026-06-11",
                 "outcome": "COMPLETED",
                 "notes": "Intro via Beeler. Will connect to internal monetisation owner."
-              }
-            ],
-            "linkedin": [
-              {
-                "id": "n4",
-                "date": "2026-07-03",
-                "text": "LinkedIn reply from InDrive: Thanks for reaching out Dan \u2014 could you email details about adding BidMachine demand?"
               }
             ],
             "new_companies": [
@@ -6689,7 +5482,6 @@
                 "url": "https://app.hubspot.com/contacts/5606823/record/0-2/lc7"
               }
             ],
-            "dau_us_added": [],
             "dau_tier1_added": [
               {
                 "id": "45994176365",
@@ -7475,36 +6267,6 @@
         }
       },
       "charts": {
-        "month": {
-          "labels": [
-            "w/c 8 Jun",
-            "w/c 15 Jun",
-            "w/c 22 Jun",
-            "w/c 29 Jun",
-            "w/c 6 Jul"
-          ],
-          "deals": [
-            52,
-            38,
-            0,
-            55,
-            65
-          ],
-          "new_deals": [
-            3,
-            2,
-            0,
-            8,
-            8
-          ],
-          "meetings": [
-            11,
-            4,
-            0,
-            7,
-            10
-          ]
-        },
         "quarter": {
           "labels": [
             "Apr 2026",
@@ -7516,19 +6278,19 @@
             0,
             28,
             88,
-            65
+            32
           ],
           "new_deals": [
             0,
             12,
             18,
-            8
+            3
           ],
           "meetings": [
             0,
             8,
             22,
-            10
+            12
           ]
         },
         "year": {
@@ -7545,12 +6307,12 @@
           "new_deals": [
             0,
             30,
-            8
+            3
           ],
           "meetings": [
             0,
             8,
-            10
+            12
           ]
         },
         "quarter_vs_last": {
@@ -7559,29 +6321,26 @@
             "New deals",
             "Qual. out",
             "Meetings",
-            "LinkedIn",
             "New cos",
             "Tier 1 DAU",
             "Peer SDK",
             "Progressed"
           ],
           "current": [
-            39,
+            41,
             3,
             5,
-            7,
-            1,
+            12,
             5,
             25,
             2,
             7
           ],
           "previous": [
-            28,
+            29,
             13,
             13,
             8,
-            0,
             7,
             12,
             2,

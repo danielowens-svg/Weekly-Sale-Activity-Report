@@ -169,11 +169,11 @@
 // ── State ────────────────────────────────────────────────────────────────────
 let DATA = null;
 let currentRepIdx = 0;
-let currentPeriod = 'week';
+let currentPeriod = 'quarter';
 let chartInstance = null;
-let currentChartType = 'bar';
 
-const PERIOD_LABELS = { week: 'Last week', month: 'Last month', quarter: 'This quarter', last_quarter: 'Last quarter', year: 'Year to date' };
+
+const PERIOD_LABELS = { quarter: 'This quarter', last_quarter: 'Last quarter', year: 'Year to date' };
 
 const STAT_CONFIG = [
   { key: 'deals_touched',   label: 'Deals touched',          color: '#4f7cff', detail: 'deals_touched' },
@@ -181,9 +181,7 @@ const STAT_CONFIG = [
   { key: 'stage_progressed',label: 'Deals progressed',        color: '#818cf8', detail: 'stage_progressed' },
   { key: 'qualified_out',   label: 'Qualified out',           color: '#f87171', detail: 'qualified_out' },
   { key: 'meetings',        label: 'Meetings',                color: '#a78bfa', detail: 'meetings' },
-  { key: 'linkedin',        label: 'LinkedIn messages',       color: '#0ea5e9', detail: 'linkedin' },
   { key: 'new_companies',   label: 'New companies',           color: '#f59e0b', detail: 'new_companies' },
-  { key: 'dau_us_added',    label: 'Deals with US DAU',       color: '#34d399', detail: 'dau_us_added' },
   { key: 'dau_tier1_added', label: 'Deals with Tier 1 DAU',   color: '#6ee7b7', detail: 'dau_tier1_added' },
   { key: 'peer_sdk',        label: 'Peer SDK qualified',      color: '#c084fc', detail: 'peer_sdk' },
 ];
@@ -240,7 +238,7 @@ function render() {
         <div class="page-sub">Updated ${DATA.generated_date} · ${PERIOD_LABELS[currentPeriod]}</div>
       </div>
       <div class="period-tabs">
-        ${['week','month','quarter','last_quarter','year','compare'].map(p => `
+        ${['quarter','last_quarter','year','compare'].map(p => `
           <button class="period-tab ${p === currentPeriod ? 'active' : ''}" onclick="selectPeriod('${p}')">${p === 'compare' ? 'Q vs Q' : PERIOD_LABELS[p]}</button>
         `).join('')}
       </div>
@@ -272,13 +270,7 @@ function render() {
             <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>New deals</div>
             <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Meetings</div>
           </div>
-          <div style="display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:3px">
-            <button onclick="setChartType('bar')" id="btn-bar" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='bar'?'var(--card)':'transparent'};color:${currentChartType==='bar'?'var(--text)':'var(--muted)'}">Bar</button>
-            <button onclick="setChartType('pie')" id="btn-pie" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='pie'?'var(--card)':'transparent'};color:${currentChartType==='pie'?'var(--text)':'var(--muted)'}">Pie</button>
-          </div>
-        </div>
-      </div>
-      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
+          <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
     </div>
 
     <div class="section-title">Stage breakdown — deals touched this ${currentPeriod === 'week' ? 'week' : currentPeriod}</div>
@@ -307,21 +299,7 @@ function chartDataKey() {
   return 'year';
 }
 
-function setChartType(type) {
-  currentChartType = type;
-  const rep = DATA.reps[currentRepIdx];
-  if (currentPeriod === 'compare') {
-    renderCompare();
-  } else {
-    renderChart(rep);
-    // re-render toggle buttons
-    document.querySelectorAll('[id^="btn-"]').forEach(b => {
-      const isActive = b.id === `btn-${type}`;
-      b.style.background = isActive ? 'var(--card)' : 'transparent';
-      b.style.color = isActive ? 'var(--text)' : 'var(--muted)';
-    });
-  }
-}
+
 
 function renderChart(rep) {
   if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
@@ -332,27 +310,7 @@ function renderChart(rep) {
 
   const PIE_COLORS = ['#4f7cff','#34d399','#a78bfa','#f59e0b','#f87171','#0ea5e9'];
 
-  if (currentChartType === 'pie') {
-    // For pie: show breakdown of deals touched by metric for the period
-    const period = rep.periods[currentPeriod] || rep.periods['week'];
-    const s = period.stats;
-    const labels = ['Deals touched','New deals','Qual. out','Meetings','LinkedIn','New cos','Tier 1 DAU','Peer SDK'];
-    const values = [s.deals_touched, s.new_deals, s.qualified_out, s.meetings, s.linkedin, s.new_companies, s.dau_tier1_added, s.peer_sdk];
-    chartInstance = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels,
-        datasets: [{ data: values, backgroundColor: PIE_COLORS, borderColor: '#0f1117', borderWidth: 2 }],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'right', labels: { color: '#9ca3af', font: { size: 11 }, padding: 12, boxWidth: 12 } },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-      },
-    });
-  } else {
+  
     chartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
@@ -513,7 +471,7 @@ function renderCompare() {
         <div class="page-sub">Updated ${DATA.generated_date} · This quarter vs last quarter</div>
       </div>
       <div class="period-tabs">
-        ${['week','month','quarter','last_quarter','year','compare'].map(p => `
+        ${['quarter','last_quarter','year','compare'].map(p => `
           <button class="period-tab ${p === currentPeriod ? 'active' : ''}" onclick="selectPeriod('${p}')">${p === 'compare' ? 'Q vs Q' : PERIOD_LABELS[p]}</button>
         `).join('')}
       </div>
@@ -546,13 +504,7 @@ function renderCompare() {
             <div class="legend-item"><div class="legend-dot" style="background:#4f7cff"></div>Q3 2026</div>
             <div class="legend-item"><div class="legend-dot" style="background:#374151"></div>Q2 2026</div>
           </div>
-          <div style="display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:3px">
-            <button onclick="setChartType('bar')" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='bar'?'var(--card)':'transparent'};color:${currentChartType==='bar'?'var(--text)':'var(--muted)'}">Bar</button>
-            <button onclick="setChartType('pie')" style="padding:4px 10px;border-radius:6px;border:none;font-size:11px;cursor:pointer;background:${currentChartType==='pie'?'var(--card)':'transparent'};color:${currentChartType==='pie'?'var(--text)':'var(--muted)'}">Pie</button>
-          </div>
-        </div>
-      </div>
-      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
+          <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
     </div>
 
     <div class="page-footer">
@@ -564,26 +516,7 @@ function renderCompare() {
   const ctx = document.getElementById('activity-chart');
   if (!ctx || !cd) return;
 
-  if (currentChartType === 'pie') {
-    // Pie shows current quarter breakdown by metric
-    const labels = ['Deals touched','New deals','Qual. out','Meetings','LinkedIn','New cos','Tier 1 DAU','Peer SDK'];
-    const values = [cq.deals_touched, cq.new_deals, cq.qualified_out, cq.meetings, cq.linkedin, cq.new_companies, cq.dau_tier1_added, cq.peer_sdk];
-    const PIE_COLORS = ['#4f7cff','#34d399','#f87171','#a78bfa','#0ea5e9','#f59e0b','#6ee7b7','#c084fc'];
-    chartInstance = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels,
-        datasets: [{ data: values, backgroundColor: PIE_COLORS, borderColor: '#0f1117', borderWidth: 2 }],
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'right', labels: { color: '#9ca3af', font: { size: 11 }, padding: 12, boxWidth: 12 } },
-          tooltip: { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 },
-        },
-      },
-    });
-  } else {
+  
     chartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
