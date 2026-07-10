@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10T14:17:25Z",
-  "generated_date": "10 Jul 2026, 14:17 UTC",
+  "generated_at": "2026-07-10T14:49:57Z",
+  "generated_date": "10 Jul 2026, 14:49 UTC",
   "reps": [
     {
       "rep": {
@@ -1670,7 +1670,7 @@
             "deals_touched": 29,
             "new_deals": 13,
             "qualified_out": 13,
-            "meetings": 8,
+            "meetings": 33,
             "new_companies": 7,
             "dau_tier1_added": 12,
             "peer_sdk": 2,
@@ -2633,60 +2633,235 @@
             },
             "meetings": [
               {
-                "id": "lq1",
-                "title": "Trade House Media / Post Industria",
-                "date": "2026-06-04",
-                "outcome": "COMPLETED",
-                "notes": "They use Post Industria (Pubmatic SDK). Need ~$25K dev work."
+                "id": "111799260435",
+                "title": "Dan / Tom intro - Minute Media",
+                "date": "2026-06-29",
+                "outcome": "",
+                "notes": ""
               },
               {
-                "id": "lq2",
-                "title": "News Corp / Tim",
-                "date": "2026-06-02",
+                "id": "111107211927",
+                "title": "Fever Labs call",
+                "date": "2026-06-16",
                 "outcome": "COMPLETED",
-                "notes": "Tim promoted to Head of Ops. Run in-house mediation GAM+TAM+Ozone."
+                "notes": "Big apps don't have biddable placements. Fever don't want open market. Atom tickets all direct sold."
               },
               {
-                "id": "lq3",
-                "title": "What3words product lead",
-                "date": "2026-06-01",
-                "outcome": "COMPLETED",
-                "notes": "Starting ad monetisation. Open to Q3 launch."
+                "id": "112211809421",
+                "title": "Dan + Dan",
+                "date": "2026-06-16",
+                "outcome": "",
+                "notes": ""
               },
               {
-                "id": "lq4",
-                "title": "Venatus (Sam)",
-                "date": "2026-05-19",
-                "outcome": "COMPLETED",
-                "notes": "No direct app inventory. Two channels: Google MCN and Index Exchange."
-              },
-              {
-                "id": "lq5",
-                "title": "NewsUK / Guillaume",
-                "date": "2026-05-19",
-                "outcome": "COMPLETED",
-                "notes": "Partners need direct placement on ads.txt."
-              },
-              {
-                "id": "lq6",
-                "title": "Match Media Group / Gregg",
-                "date": "2026-05-13",
-                "outcome": "COMPLETED",
-                "notes": "Match acquired Sniffy's. Introducing Dan to Greg Murphy."
-              },
-              {
-                "id": "lq7",
-                "title": "Beeler Tech",
-                "date": "2026-06-10",
-                "outcome": "COMPLETED",
-                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
-              },
-              {
-                "id": "lq8",
+                "id": "110909516609",
                 "title": "Fandom / Noeleen Boyle",
                 "date": "2026-06-11",
                 "outcome": "COMPLETED",
-                "notes": "Intro via Beeler. Will connect to internal monetisation owner."
+                "notes": "Met at Beeler. Will connect to internal monetisation owner."
+              },
+              {
+                "id": "110870896281",
+                "title": "Beeler - Michael",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Caught up at Beeler. Planning follow up."
+              },
+              {
+                "id": "110870892403",
+                "title": "Beeler - fleeting hello",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Following up on LinkedIn."
+              },
+              {
+                "id": "110871440978",
+                "title": "Beeler - webview blocker",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Webview is a blocker for SDK. Need answer before product meeting."
+              },
+              {
+                "id": "110871369320",
+                "title": "Beeler - Dan intro",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Met Dan at Beeler. Setting up proper meeting."
+              },
+              {
+                "id": "110871404706",
+                "title": "Beeler - Leonor and Anthony Hitchings",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Anthony was presenting. Following up."
+              },
+              {
+                "id": "110871357581",
+                "title": "Beeler - brief meeting",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Very brief. Following up on LinkedIn."
+              },
+              {
+                "id": "110871347461",
+                "title": "Beeler - James",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Briefly met James. Following up for intro meeting."
+              },
+              {
+                "id": "110870850333",
+                "title": "Beeler - Sim (Warner Bros/Paramount)",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "APAC demand a focus. Open to meeting end of June. EU regulatory sign-off pending."
+              },
+              {
+                "id": "110870582955",
+                "title": "Beeler - Sonia",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "In London most Thursdays. Proposing meeting."
+              },
+              {
+                "id": "110778418495",
+                "title": "Dijital Elma / Bidmachine",
+                "date": "2026-06-10",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110632437817",
+                "title": "Trade House Media / Post Industria",
+                "date": "2026-06-04",
+                "outcome": "COMPLETED",
+                "notes": "Use Post Industria (Pubmatic SDK). Need 25K dev work. Re-pitching Sinclair vs FreeStar. Awaiting result."
+              },
+              {
+                "id": "110477022866",
+                "title": "Dan / Spencer brunch",
+                "date": "2026-06-04",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110517303971",
+                "title": "News Corp / Tim",
+                "date": "2026-06-02",
+                "outcome": "COMPLETED",
+                "notes": "Tim promoted to Head of Ops. In-house mediation GAM+TAM+Ozone. Evaluating BidMachine parallel/cached bidding."
+              },
+              {
+                "id": "110185626510",
+                "title": "Dan / Tim coffee",
+                "date": "2026-06-02",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110449837851",
+                "title": "What3words product lead",
+                "date": "2026-06-01",
+                "outcome": "COMPLETED",
+                "notes": "Starting ad monetisation. SDK size a concern. Open to Q3 launch."
+              },
+              {
+                "id": "110364864137",
+                "title": "Bidmachine / what3words",
+                "date": "2026-06-01",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109411722769",
+                "title": "Dan / Michele (Underdog)",
+                "date": "2026-05-21",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109370114180",
+                "title": "Minute Media Breakfast - Jack Watt",
+                "date": "2026-05-20",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109505738899",
+                "title": "Dan / Zach catch up",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109782368665",
+                "title": "Venatus / Sam",
+                "date": "2026-05-19",
+                "outcome": "COMPLETED",
+                "notes": "No direct app inventory. Google MCN and curation via Index Exchange (Unity, Rovio)."
+              },
+              {
+                "id": "109641173407",
+                "title": "Dan / Guillaume coffee (NewsUK)",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109484511275",
+                "title": "NewsUK coffee meeting",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109651888785",
+                "title": "152 Media / Matias",
+                "date": "2026-05-15",
+                "outcome": "COMPLETED",
+                "notes": "CRO only interested in buying traffic. No direct app access. Asked about oRTB/S2S."
+              },
+              {
+                "id": "109642069361",
+                "title": "Dan / Matias (152 Media)",
+                "date": "2026-05-15",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109535920907",
+                "title": "Dan / Neil catch up",
+                "date": "2026-05-15",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109545644854",
+                "title": "Match Media Group / Gregg",
+                "date": "2026-05-13",
+                "outcome": "COMPLETED",
+                "notes": "Google custom cards, Unity rewarded, Nimbus header bidding. Custom swipe-right format. Q3 decisions."
+              },
+              {
+                "id": "109491563066",
+                "title": "Intro Dan / Gregg (Match)",
+                "date": "2026-05-13",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109287653542",
+                "title": "Match / Lisette",
+                "date": "2026-05-07",
+                "outcome": "COMPLETED",
+                "notes": "Match acquired Sniffies. Introducing Dan to Greg Murphy."
+              },
+              {
+                "id": "108926648329",
+                "title": "Dan / Andrew catch up",
+                "date": "2026-05-06",
+                "outcome": "",
+                "notes": ""
               }
             ],
             "new_companies": [
@@ -2975,7 +3150,7 @@
             "deals_touched": 67,
             "new_deals": 39,
             "qualified_out": 18,
-            "meetings": 21,
+            "meetings": 46,
             "new_companies": 12,
             "dau_tier1_added": 37,
             "peer_sdk": 12,
@@ -5340,60 +5515,235 @@
                 "notes": ""
               },
               {
-                "id": "lq1",
-                "title": "Trade House Media / Post Industria",
-                "date": "2026-06-04",
-                "outcome": "COMPLETED",
-                "notes": "They use Post Industria (Pubmatic SDK). Need ~$25K dev work."
+                "id": "111799260435",
+                "title": "Dan / Tom intro - Minute Media",
+                "date": "2026-06-29",
+                "outcome": "",
+                "notes": ""
               },
               {
-                "id": "lq2",
-                "title": "News Corp / Tim",
-                "date": "2026-06-02",
+                "id": "111107211927",
+                "title": "Fever Labs call",
+                "date": "2026-06-16",
                 "outcome": "COMPLETED",
-                "notes": "Tim promoted to Head of Ops. Run in-house mediation GAM+TAM+Ozone."
+                "notes": "Big apps don't have biddable placements. Fever don't want open market. Atom tickets all direct sold."
               },
               {
-                "id": "lq3",
-                "title": "What3words product lead",
-                "date": "2026-06-01",
-                "outcome": "COMPLETED",
-                "notes": "Starting ad monetisation. Open to Q3 launch."
+                "id": "112211809421",
+                "title": "Dan + Dan",
+                "date": "2026-06-16",
+                "outcome": "",
+                "notes": ""
               },
               {
-                "id": "lq4",
-                "title": "Venatus (Sam)",
-                "date": "2026-05-19",
-                "outcome": "COMPLETED",
-                "notes": "No direct app inventory. Two channels: Google MCN and Index Exchange."
-              },
-              {
-                "id": "lq5",
-                "title": "NewsUK / Guillaume",
-                "date": "2026-05-19",
-                "outcome": "COMPLETED",
-                "notes": "Partners need direct placement on ads.txt."
-              },
-              {
-                "id": "lq6",
-                "title": "Match Media Group / Gregg",
-                "date": "2026-05-13",
-                "outcome": "COMPLETED",
-                "notes": "Match acquired Sniffy's. Introducing Dan to Greg Murphy."
-              },
-              {
-                "id": "lq7",
-                "title": "Beeler Tech",
-                "date": "2026-06-10",
-                "outcome": "COMPLETED",
-                "notes": "9 contacts. Sim (Warner Bros) and Noeleen (Fandom) strongest leads."
-              },
-              {
-                "id": "lq8",
+                "id": "110909516609",
                 "title": "Fandom / Noeleen Boyle",
                 "date": "2026-06-11",
                 "outcome": "COMPLETED",
-                "notes": "Intro via Beeler. Will connect to internal monetisation owner."
+                "notes": "Met at Beeler. Will connect to internal monetisation owner."
+              },
+              {
+                "id": "110870896281",
+                "title": "Beeler - Michael",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Caught up at Beeler. Planning follow up."
+              },
+              {
+                "id": "110870892403",
+                "title": "Beeler - fleeting hello",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Following up on LinkedIn."
+              },
+              {
+                "id": "110871440978",
+                "title": "Beeler - webview blocker",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Webview is a blocker for SDK. Need answer before product meeting."
+              },
+              {
+                "id": "110871369320",
+                "title": "Beeler - Dan intro",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Met Dan at Beeler. Setting up proper meeting."
+              },
+              {
+                "id": "110871404706",
+                "title": "Beeler - Leonor and Anthony Hitchings",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Anthony was presenting. Following up."
+              },
+              {
+                "id": "110871357581",
+                "title": "Beeler - brief meeting",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Very brief. Following up on LinkedIn."
+              },
+              {
+                "id": "110871347461",
+                "title": "Beeler - James",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "Briefly met James. Following up for intro meeting."
+              },
+              {
+                "id": "110870850333",
+                "title": "Beeler - Sim (Warner Bros/Paramount)",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "APAC demand a focus. Open to meeting end of June. EU regulatory sign-off pending."
+              },
+              {
+                "id": "110870582955",
+                "title": "Beeler - Sonia",
+                "date": "2026-06-10",
+                "outcome": "COMPLETED",
+                "notes": "In London most Thursdays. Proposing meeting."
+              },
+              {
+                "id": "110778418495",
+                "title": "Dijital Elma / Bidmachine",
+                "date": "2026-06-10",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110632437817",
+                "title": "Trade House Media / Post Industria",
+                "date": "2026-06-04",
+                "outcome": "COMPLETED",
+                "notes": "Use Post Industria (Pubmatic SDK). Need 25K dev work. Re-pitching Sinclair vs FreeStar. Awaiting result."
+              },
+              {
+                "id": "110477022866",
+                "title": "Dan / Spencer brunch",
+                "date": "2026-06-04",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110517303971",
+                "title": "News Corp / Tim",
+                "date": "2026-06-02",
+                "outcome": "COMPLETED",
+                "notes": "Tim promoted to Head of Ops. In-house mediation GAM+TAM+Ozone. Evaluating BidMachine parallel/cached bidding."
+              },
+              {
+                "id": "110185626510",
+                "title": "Dan / Tim coffee",
+                "date": "2026-06-02",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "110449837851",
+                "title": "What3words product lead",
+                "date": "2026-06-01",
+                "outcome": "COMPLETED",
+                "notes": "Starting ad monetisation. SDK size a concern. Open to Q3 launch."
+              },
+              {
+                "id": "110364864137",
+                "title": "Bidmachine / what3words",
+                "date": "2026-06-01",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109411722769",
+                "title": "Dan / Michele (Underdog)",
+                "date": "2026-05-21",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109370114180",
+                "title": "Minute Media Breakfast - Jack Watt",
+                "date": "2026-05-20",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109505738899",
+                "title": "Dan / Zach catch up",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109782368665",
+                "title": "Venatus / Sam",
+                "date": "2026-05-19",
+                "outcome": "COMPLETED",
+                "notes": "No direct app inventory. Google MCN and curation via Index Exchange (Unity, Rovio)."
+              },
+              {
+                "id": "109641173407",
+                "title": "Dan / Guillaume coffee (NewsUK)",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109484511275",
+                "title": "NewsUK coffee meeting",
+                "date": "2026-05-19",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109651888785",
+                "title": "152 Media / Matias",
+                "date": "2026-05-15",
+                "outcome": "COMPLETED",
+                "notes": "CRO only interested in buying traffic. No direct app access. Asked about oRTB/S2S."
+              },
+              {
+                "id": "109642069361",
+                "title": "Dan / Matias (152 Media)",
+                "date": "2026-05-15",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109535920907",
+                "title": "Dan / Neil catch up",
+                "date": "2026-05-15",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109545644854",
+                "title": "Match Media Group / Gregg",
+                "date": "2026-05-13",
+                "outcome": "COMPLETED",
+                "notes": "Google custom cards, Unity rewarded, Nimbus header bidding. Custom swipe-right format. Q3 decisions."
+              },
+              {
+                "id": "109491563066",
+                "title": "Intro Dan / Gregg (Match)",
+                "date": "2026-05-13",
+                "outcome": "",
+                "notes": ""
+              },
+              {
+                "id": "109287653542",
+                "title": "Match / Lisette",
+                "date": "2026-05-07",
+                "outcome": "COMPLETED",
+                "notes": "Match acquired Sniffies. Introducing Dan to Greg Murphy."
+              },
+              {
+                "id": "108926648329",
+                "title": "Dan / Andrew catch up",
+                "date": "2026-05-06",
+                "outcome": "",
+                "notes": ""
               }
             ],
             "new_companies": [
@@ -6311,7 +6661,7 @@
           ],
           "meetings": [
             0,
-            8,
+            33,
             12
           ]
         },
@@ -6340,7 +6690,7 @@
             29,
             13,
             13,
-            8,
+            33,
             7,
             12,
             2,
