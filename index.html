@@ -119,6 +119,26 @@
     .stat-value { font-size: 24px; }
     .drawer { width: 100vw; }
   }
+
+  /* ── Deal Nudger ── */
+  .nudger-wrap { margin-bottom: 2rem; }
+  .nudger-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; position: relative; overflow: hidden; }
+  .nudger-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #f87171); }
+  .nudger-icon { font-size: 22px; flex-shrink: 0; }
+  .nudger-body { flex: 1; min-width: 0; }
+  .nudger-eyebrow { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; }
+  .nudger-name { font-size: 16px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
+  .nudger-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .nudger-stage { font-size: 12px; color: var(--muted); }
+  .nudger-days { font-size: 12px; font-weight: 600; color: #f87171; }
+  .nudger-amount { font-size: 12px; color: var(--accent2); }
+  .nudger-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+  .nudger-open { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: #fff; border: none; border-radius: 7px; padding: 8px 14px; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; transition: opacity .12s; }
+  .nudger-open:hover { opacity: .85; }
+  .nudger-skip { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; padding: 0; }
+  .nudger-skip:hover { color: var(--text); }
+  .nudger-progress { font-size: 11px; color: var(--muted); text-align: right; }
+  .nudger-empty { font-size: 13px; color: var(--muted); text-align: center; padding: .5rem 0; }
 </style>
 </head>
 <body>
@@ -261,6 +281,8 @@ function render() {
       }).join('')}
     </div>
 
+    <div class="nudger-wrap" id="nudger-wrap"></div>
+
     <div class="chart-section">
       <div class="chart-header">
         <div class="chart-title">${chartTitle()}</div>
@@ -284,6 +306,8 @@ function render() {
     </div>`;
 
   renderChart(rep);
+  buildNudgerQueue();
+  renderNudger();
 }
 
 function chartTitle() {
@@ -566,6 +590,82 @@ function showAddRepInfo() {
     </div>`;
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('drawer').classList.add('open');
+}
+
+
+// ── Deal Nudger ────────────────────────────────────────────────────────────────
+let nudgerQueue = [];
+let nudgerIdx = 0;
+
+function buildNudgerQueue() {
+  const rep = DATA.reps[currentRepIdx];
+  // Use year period to get broadest deal list
+  const all = rep.periods.year.detail.deals_touched || [];
+  const CLOSED_STAGES = new Set(['Sales Qualified Out','Closed Lost','Email activity']);
+  // Filter to active deals only, sort by date ascending (oldest first)
+  const active = all
+    .filter(d => !CLOSED_STAGES.has(d.stage) && d.date)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  nudgerQueue = active;
+  nudgerIdx = 0;
+}
+
+function daysAgo(dateStr) {
+  if (!dateStr) return 0;
+  const then = new Date(dateStr);
+  const now = new Date();
+  return Math.floor((now - then) / 86400000);
+}
+
+function fmtAmount(v) {
+  if (!v) return null;
+  const n = Math.round(Number(v));
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return '$' + (n/1e3).toFixed(0) + 'K';
+  return '$' + n.toLocaleString();
+}
+
+function renderNudger() {
+  const wrap = document.getElementById('nudger-wrap');
+  if (!wrap) return;
+  if (!nudgerQueue.length) {
+    wrap.innerHTML = '';
+    return;
+  }
+
+  const deal = nudgerQueue[nudgerIdx];
+  const days = daysAgo(deal.date);
+  const amt = fmtAmount(deal.amount);
+  const total = nudgerQueue.length;
+  const pos = nudgerIdx + 1;
+
+  wrap.innerHTML = `
+    <div class="nudger-card">
+      <div class="nudger-icon">⏰</div>
+      <div class="nudger-body">
+        <div class="nudger-eyebrow">Needs attention — deal ${pos} of ${total}</div>
+        <div class="nudger-name">${deal.name}</div>
+        <div class="nudger-meta">
+          <span class="nudger-stage">${deal.stage}</span>
+          <span class="nudger-days">${days} days since last activity</span>
+          ${amt ? '<span class="nudger-amount">' + amt + '</span>' : ''}
+        </div>
+      </div>
+      <div class="nudger-actions">
+        <a class="nudger-open" href="${deal.url}" target="_blank" rel="noopener"
+           onclick="setTimeout(nudgerNext, 400)">
+          Open in HubSpot ↗
+        </a>
+        <button class="nudger-skip" onclick="nudgerNext()">Skip →</button>
+        <div class="nudger-progress">${pos} / ${total}</div>
+      </div>
+    </div>`;
+}
+
+function nudgerNext() {
+  if (!nudgerQueue.length) return;
+  nudgerIdx = (nudgerIdx + 1) % nudgerQueue.length;
+  renderNudger();
 }
 
 boot();
