@@ -599,14 +599,7 @@ let nudgerIdx = 0;
 
 function buildNudgerQueue() {
   const rep = DATA.reps[currentRepIdx];
-  // Use year period to get broadest deal list
-  const all = rep.periods.year.detail.deals_touched || [];
-  const CLOSED_STAGES = new Set(['Sales Qualified Out','Closed Lost','Email activity']);
-  // Filter to active deals only, sort by date ascending (oldest first)
-  const active = all
-    .filter(d => !CLOSED_STAGES.has(d.stage) && d.date)
-    .sort((a, b) => a.date.localeCompare(b.date));
-  nudgerQueue = active;
+  nudgerQueue = rep.nudger || [];
   nudgerIdx = 0;
 }
 
