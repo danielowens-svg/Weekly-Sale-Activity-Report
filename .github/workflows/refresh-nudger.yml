@@ -1,0 +1,59 @@
+# Paste this into the repo at: .github/workflows/refresh-nudger.yml
+#
+# Before it will run, add the token as a repository secret:
+#   Settings -> Secrets and variables -> Actions -> New repository secret
+#   Name:  HUBSPOT_TOKEN
+#   Value: your HubSpot private-app token (scopes: crm.objects.deals.read,
+#          crm.schemas.deals.read)
+#
+# Optional second secret, only if you have a DAU custom property:
+#   Name:  DAU_FIELD   Value: the property's internal name
+
+name: Refresh deal nudger
+
+on:
+  schedule:
+    # 07:00 UTC every Monday — queue is fresh before the week starts.
+    - cron: "0 7 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-nudger
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # No pip install step: refresh_nudger.py is standard library only.
+      - name: Rebuild nudger queue from HubSpot
+        env:
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+          DAU_FIELD: ${{ secrets.DAU_FIELD }}
+        run: python refresh_nudger.py
+
+      - name: Commit if the queue changed
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- data/sales_data.json; then
+            echo "No change to the nudger queue — nothing to commit."
+            exit 0
+          fi
+
+          git add data/sales_data.json
+          git commit -m "data: refresh deal nudger $(date -u +%Y-%m-%d)"
+          git push
