@@ -6903,7 +6903,7 @@
           "id": "59725747570",
           "name": "NBCUniversal",
           "full_name": "Indirect | NBCUniversal",
-          "stage": "Lead with Peer SDK",
+          "stage": "Started Outreach",
           "amount": 80277.0,
           "date": "2026-05-14",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725747570",
@@ -7167,16 +7167,6 @@
           "amount": 116910.41,
           "date": "2026-06-30",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45993094400",
-          "dau_tier1": null
-        },
-        {
-          "id": "59724881228",
-          "name": "Microsoft",
-          "full_name": "Indirect | Microsoft",
-          "stage": "Lead",
-          "amount": 0.0,
-          "date": "2026-07-01",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724881228",
           "dau_tier1": null
         },
         {
@@ -7570,16 +7560,6 @@
           "dau_tier1": null
         },
         {
-          "id": "63434016790",
-          "name": "TorAlarm GmbH",
-          "full_name": "Mediation | TorAlarm GmbH",
-          "stage": "Sales Prospecting",
-          "amount": null,
-          "date": "2026-08-14",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63434016790",
-          "dau_tier1": null
-        },
-        {
           "id": "63837113754",
           "name": "ZipoApps",
           "full_name": "Indirect | ZipoApps",
@@ -7607,6 +7587,16 @@
           "amount": 47.0,
           "date": "2026-08-14",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63702944580",
+          "dau_tier1": null
+        },
+        {
+          "id": "63434016790",
+          "name": "TorAlarm GmbH",
+          "full_name": "Mediation | TorAlarm GmbH",
+          "stage": "Sales Prospecting",
+          "amount": null,
+          "date": "2026-08-14",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63434016790",
           "dau_tier1": null
         },
         {
@@ -7670,16 +7660,6 @@
           "dau_tier1": null
         },
         {
-          "id": "59724831156",
-          "name": "Kleinanzeigen",
-          "full_name": "Indirect | Kleinanzeigen",
-          "stage": "Sales Qualified Lead",
-          "amount": 0.0,
-          "date": "2026-08-21",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724831156",
-          "dau_tier1": null
-        },
-        {
           "id": "64244974189",
           "name": "ArtWorkout",
           "full_name": "Indirect | ArtWorkout",
@@ -7697,6 +7677,16 @@
           "amount": 0.0,
           "date": "2026-08-21",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59707811642",
+          "dau_tier1": null
+        },
+        {
+          "id": "59724831156",
+          "name": "Kleinanzeigen",
+          "full_name": "Indirect | Kleinanzeigen",
+          "stage": "Sales Qualified Lead",
+          "amount": 0.0,
+          "date": "2026-08-21",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724831156",
           "dau_tier1": null
         },
         {
@@ -7720,16 +7710,6 @@
           "dau_tier1": null
         },
         {
-          "id": "29202384969",
-          "name": "Gameberry Labs",
-          "full_name": "Indirect | Gameberry Labs",
-          "stage": "Sales Prospecting",
-          "amount": 198167.91,
-          "date": "2026-08-24",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/29202384969",
-          "dau_tier1": null
-        },
-        {
           "id": "57393985163",
           "name": "NPR",
           "full_name": "Indirect | NPR",
@@ -7737,16 +7717,6 @@
           "amount": 0.0,
           "date": "2026-08-24",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57393985163",
-          "dau_tier1": null
-        },
-        {
-          "id": "59724849559",
-          "name": "Rightmove",
-          "full_name": "Indirect | Rightmove",
-          "stage": "Lead",
-          "amount": 0.0,
-          "date": "2026-08-25",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724849559",
           "dau_tier1": null
         },
         {
@@ -7790,6 +7760,16 @@
           "dau_tier1": null
         },
         {
+          "id": "59724849559",
+          "name": "Rightmove",
+          "full_name": "Indirect | Rightmove",
+          "stage": "Started Outreach",
+          "amount": 0.0,
+          "date": "2026-08-25",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724849559",
+          "dau_tier1": null
+        },
+        {
           "id": "64338437155",
           "name": "Coffee Stain Studios",
           "full_name": "Coffee Stain Studios",
@@ -7810,16 +7790,6 @@
           "dau_tier1": null
         },
         {
-          "id": "61625384759",
-          "name": "MW Webwork",
-          "full_name": "Indirect | MW Webwork",
-          "stage": "Sales Proposal",
-          "amount": 0.0,
-          "date": "2026-08-27",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61625384759",
-          "dau_tier1": null
-        },
-        {
           "id": "64338470017",
           "name": "Sincere Corporation (Timehop)",
           "full_name": "Indirect | Sincere Corporation (Timehop)",
@@ -7827,6 +7797,16 @@
           "amount": null,
           "date": "2026-08-27",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64338470017",
+          "dau_tier1": null
+        },
+        {
+          "id": "61625384759",
+          "name": "MW Webwork",
+          "full_name": "Indirect | MW Webwork",
+          "stage": "Sales Proposal",
+          "amount": 0.0,
+          "date": "2026-08-27",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61625384759",
           "dau_tier1": null
         },
         {
@@ -7910,16 +7890,6 @@
           "dau_tier1": null
         },
         {
-          "id": "57389803862",
-          "name": "Bumble Holding Limited",
-          "full_name": "Indirect | Bumble Holding Limited",
-          "stage": "Sales Prospecting",
-          "amount": 0.0,
-          "date": "2026-09-02",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57389803862",
-          "dau_tier1": null
-        },
-        {
           "id": "64524685691",
           "name": "Pacer Health, Inc",
           "full_name": "Mediation | Pacer Health, Inc",
@@ -7927,6 +7897,16 @@
           "amount": null,
           "date": "2026-09-02",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64524685691",
+          "dau_tier1": null
+        },
+        {
+          "id": "57389803862",
+          "name": "Bumble Holding Limited",
+          "full_name": "Indirect | Bumble Holding Limited",
+          "stage": "Sales Prospecting",
+          "amount": 0.0,
+          "date": "2026-09-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/57389803862",
           "dau_tier1": null
         },
         {
@@ -8010,16 +7990,6 @@
           "dau_tier1": null
         },
         {
-          "id": "58594098005",
-          "name": "Spotify",
-          "full_name": "Indirect | Spotify",
-          "stage": "Lead",
-          "amount": 0.0,
-          "date": "2026-09-04",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/58594098005",
-          "dau_tier1": null
-        },
-        {
           "id": "64627701345",
           "name": "Gismart",
           "full_name": "Indirect | Gismart",
@@ -8027,6 +7997,16 @@
           "amount": null,
           "date": "2026-09-04",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64627701345",
+          "dau_tier1": null
+        },
+        {
+          "id": "58594098005",
+          "name": "Spotify",
+          "full_name": "Indirect | Spotify",
+          "stage": "Started Outreach",
+          "amount": 0.0,
+          "date": "2026-09-04",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/58594098005",
           "dau_tier1": null
         },
         {
@@ -8090,16 +8070,6 @@
           "dau_tier1": null
         },
         {
-          "id": "60973927584",
-          "name": "Sliide",
-          "full_name": "Indirect | Sliide",
-          "stage": "Sales Proposal",
-          "amount": 0.0,
-          "date": "2026-09-07",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60973927584",
-          "dau_tier1": null
-        },
-        {
           "id": "61749706635",
           "name": "® SUOL INNOVATIONS LTD (InDrive)",
           "full_name": "Indirect | ® SUOL INNOVATIONS LTD (InDrive)",
@@ -8107,16 +8077,6 @@
           "amount": 0.0,
           "date": "2026-09-08",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61749706635",
-          "dau_tier1": null
-        },
-        {
-          "id": "3851796237",
-          "name": "Vinted",
-          "full_name": "Indirect | Vinted",
-          "stage": "Lead",
-          "amount": 51356.0,
-          "date": "2026-09-08",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/3851796237",
           "dau_tier1": null
         },
         {
@@ -8137,6 +8097,16 @@
           "amount": 0.0,
           "date": "2026-09-08",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724915985",
+          "dau_tier1": null
+        },
+        {
+          "id": "3851796237",
+          "name": "Vinted",
+          "full_name": "Indirect | Vinted",
+          "stage": "Started Outreach",
+          "amount": 51356.0,
+          "date": "2026-09-08",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/3851796237",
           "dau_tier1": null
         },
         {
@@ -8240,16 +8210,6 @@
           "dau_tier1": null
         },
         {
-          "id": "63837048191",
-          "name": "Nordeus",
-          "full_name": "Indirect | Nordeus",
-          "stage": "Lead",
-          "amount": 104670.09,
-          "date": "2026-09-11",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63837048191",
-          "dau_tier1": null
-        },
-        {
           "id": "56939695691",
           "name": "Indirect Apex Designs Games LLP",
           "full_name": "Indirect Apex Designs Games LLP",
@@ -8267,16 +8227,6 @@
           "amount": null,
           "date": "2026-09-11",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64282511399",
-          "dau_tier1": null
-        },
-        {
-          "id": "64519472812",
-          "name": "Kijiji Canada",
-          "full_name": "Indirect | Kijiji Canada",
-          "stage": "Started Outreach",
-          "amount": null,
-          "date": "2026-09-11",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64519472812",
           "dau_tier1": null
         },
         {
@@ -8320,6 +8270,26 @@
           "dau_tier1": null
         },
         {
+          "id": "63837048191",
+          "name": "Nordeus",
+          "full_name": "Indirect | Nordeus",
+          "stage": "Started Outreach",
+          "amount": 104670.09,
+          "date": "2026-09-11",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63837048191",
+          "dau_tier1": null
+        },
+        {
+          "id": "64519472812",
+          "name": "Kijiji Canada",
+          "full_name": "Indirect | Kijiji Canada",
+          "stage": "Started Outreach",
+          "amount": null,
+          "date": "2026-09-11",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64519472812",
+          "dau_tier1": null
+        },
+        {
           "id": "46008372826",
           "name": "SoundCloud",
           "full_name": "Indirect | SoundCloud",
@@ -8360,16 +8330,6 @@
           "dau_tier1": null
         },
         {
-          "id": "45994176365",
-          "name": "Indirect TuneIn",
-          "full_name": "Indirect TuneIn",
-          "stage": "Lead",
-          "amount": 742250.0,
-          "date": "2026-09-16",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45994176365",
-          "dau_tier1": null
-        },
-        {
           "id": "59419210080",
           "name": "Future Today",
           "full_name": "Indirect | Future Today",
@@ -8380,10 +8340,30 @@
           "dau_tier1": null
         },
         {
+          "id": "65027668751",
+          "name": "Rakuten Viki",
+          "full_name": "Indirect | Rakuten Viki",
+          "stage": "Lead",
+          "amount": null,
+          "date": "2026-09-16",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/65027668751",
+          "dau_tier1": null
+        },
+        {
+          "id": "45994176365",
+          "name": "Indirect TuneIn",
+          "full_name": "Indirect TuneIn",
+          "stage": "Started Outreach",
+          "amount": 742250.0,
+          "date": "2026-09-16",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/45994176365",
+          "dau_tier1": null
+        },
+        {
           "id": "59725741170",
           "name": "Rakuten (Viki)",
           "full_name": "Indirect | Rakuten (Viki)",
-          "stage": "Lead with Peer SDK",
+          "stage": "Sales Prospecting",
           "amount": 0.0,
           "date": "2026-09-16",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59725741170",
@@ -8397,16 +8377,6 @@
           "amount": 0.0,
           "date": "2026-09-16",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60323133216",
-          "dau_tier1": null
-        },
-        {
-          "id": "65027668751",
-          "name": "Rakuten Viki",
-          "full_name": "Indirect | Rakuten Viki",
-          "stage": "Lead",
-          "amount": null,
-          "date": "2026-09-16",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/65027668751",
           "dau_tier1": null
         },
         {
@@ -8450,13 +8420,13 @@
           "dau_tier1": null
         },
         {
-          "id": "64877248671",
-          "name": "Walmart",
-          "full_name": "Indirect | Walmart",
-          "stage": "Lead",
+          "id": "64877309710",
+          "name": "MapQuest",
+          "full_name": "Indirect | MapQuest",
+          "stage": "Started Outreach",
           "amount": null,
-          "date": "2026-09-20",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877248671",
+          "date": "2026-09-21",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877309710",
           "dau_tier1": null
         },
         {
@@ -8470,56 +8440,6 @@
           "dau_tier1": null
         },
         {
-          "id": "64877309710",
-          "name": "MapQuest",
-          "full_name": "Indirect | MapQuest",
-          "stage": "Started Outreach",
-          "amount": null,
-          "date": "2026-09-21",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877309710",
-          "dau_tier1": null
-        },
-        {
-          "id": "64877492291",
-          "name": "Freecash",
-          "full_name": "Indirect | Freecash",
-          "stage": "Started Outreach",
-          "amount": null,
-          "date": "2026-09-21",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877492291",
-          "dau_tier1": null
-        },
-        {
-          "id": "52931700109",
-          "name": "Indirect: Better Collective",
-          "full_name": "Indirect: Better Collective",
-          "stage": "Sales Proposal",
-          "amount": 61139.0,
-          "date": "2026-09-21",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/52931700109",
-          "dau_tier1": null
-        },
-        {
-          "id": "61935672396",
-          "name": "Muzz LTD",
-          "full_name": "Indirect | Muzz LTD",
-          "stage": "Sales Proposal",
-          "amount": 0.0,
-          "date": "2026-09-22",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61935672396",
-          "dau_tier1": null
-        },
-        {
-          "id": "64909516820",
-          "name": "Andrew from Muzz ltd requests Bidmachine",
-          "full_name": "Andrew from Muzz ltd requests Bidmachine",
-          "stage": "Marketing Qualified Lead",
-          "amount": null,
-          "date": "2026-09-22",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64909516820",
-          "dau_tier1": null
-        },
-        {
           "id": "64338443333",
           "name": "PENN Entertainment (theScore)",
           "full_name": "Indirect | PENN Entertainment (theScore)",
@@ -8527,36 +8447,6 @@
           "amount": null,
           "date": "2026-09-22",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64338443333",
-          "dau_tier1": null
-        },
-        {
-          "id": "63836925766",
-          "name": "Cypher Games",
-          "full_name": "Indirect | Cypher Games",
-          "stage": "Lead",
-          "amount": null,
-          "date": "2026-09-22",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63836925766",
-          "dau_tier1": null
-        },
-        {
-          "id": "64895816211",
-          "name": "Defne from Cypher Games requests Bidmachine",
-          "full_name": "Defne from Cypher Games requests Bidmachine",
-          "stage": "Marketing Qualified Lead",
-          "amount": null,
-          "date": "2026-09-22",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64895816211",
-          "dau_tier1": null
-        },
-        {
-          "id": "65156943933",
-          "name": "Bauer Media",
-          "full_name": "Mediation | Bauer Media",
-          "stage": "Sales Qualified Lead",
-          "amount": null,
-          "date": "2026-09-22",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/65156943933",
           "dau_tier1": null
         },
         {
@@ -8580,16 +8470,6 @@
           "dau_tier1": null
         },
         {
-          "id": "4999713719",
-          "name": "Viber",
-          "full_name": "Indirect | Viber",
-          "stage": "Sales Qualified Lead",
-          "amount": 506691.0,
-          "date": "2026-09-23",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/4999713719",
-          "dau_tier1": null
-        },
-        {
           "id": "56927344446",
           "name": "OLX Brasil",
           "full_name": "Indirect | OLX Brasil",
@@ -8610,16 +8490,6 @@
           "dau_tier1": null
         },
         {
-          "id": "59724795021",
-          "name": "Media.net",
-          "full_name": "Indirect | Media.net",
-          "stage": "Lead",
-          "amount": 0.0,
-          "date": "2026-09-24",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724795021",
-          "dau_tier1": null
-        },
-        {
           "id": "64576195426",
           "name": "Tuttocampo",
           "full_name": "Indirect | Tuttocampo",
@@ -8627,16 +8497,6 @@
           "amount": null,
           "date": "2026-09-24",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64576195426",
-          "dau_tier1": null
-        },
-        {
-          "id": "58591201183",
-          "name": "Daily Mail",
-          "full_name": "Indirect | Daily Mail",
-          "stage": "Lead",
-          "amount": 19349.0,
-          "date": "2026-09-25",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/58591201183",
           "dau_tier1": null
         },
         {
@@ -8680,6 +8540,26 @@
           "dau_tier1": null
         },
         {
+          "id": "58591201183",
+          "name": "Daily Mail",
+          "full_name": "Indirect | Daily Mail",
+          "stage": "Lead",
+          "amount": 19349.0,
+          "date": "2026-09-28",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/58591201183",
+          "dau_tier1": null
+        },
+        {
+          "id": "64877492291",
+          "name": "Freecash",
+          "full_name": "Indirect | Freecash",
+          "stage": "Started Outreach",
+          "amount": null,
+          "date": "2026-09-28",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877492291",
+          "dau_tier1": null
+        },
+        {
           "id": "45977801735",
           "name": "Indirect Playwind Ltd",
           "full_name": "Indirect Playwind Ltd",
@@ -8695,22 +8575,112 @@
           "full_name": "Indirect | MediaLab",
           "stage": "MSA Shared with Customer",
           "amount": 268777.0,
-          "date": "2026-09-28",
+          "date": "2026-09-29",
           "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63186789139",
           "dau_tier1": null
         },
         {
-          "id": "62852776065",
-          "name": "YAZIO GmbH",
-          "full_name": "Indirect | YAZIO GmbH",
-          "stage": "MSA Shared with Customer",
-          "amount": 62780.0,
-          "date": "2026-09-28",
-          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/62852776065",
+          "id": "52931700109",
+          "name": "Indirect: Better Collective",
+          "full_name": "Indirect: Better Collective",
+          "stage": "Sales Proposal",
+          "amount": 61139.0,
+          "date": "2026-09-30",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/52931700109",
+          "dau_tier1": null
+        },
+        {
+          "id": "59724881228",
+          "name": "Microsoft",
+          "full_name": "Indirect | Microsoft",
+          "stage": "Lead",
+          "amount": 0.0,
+          "date": "2026-10-01",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724881228",
+          "dau_tier1": null
+        },
+        {
+          "id": "59724795021",
+          "name": "Media.net",
+          "full_name": "Indirect | Media.net",
+          "stage": "Lead",
+          "amount": 0.0,
+          "date": "2026-10-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/59724795021",
+          "dau_tier1": null
+        },
+        {
+          "id": "4999713719",
+          "name": "Viber",
+          "full_name": "Indirect | Viber",
+          "stage": "Sales Qualified Lead",
+          "amount": 506691.0,
+          "date": "2026-10-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/4999713719",
+          "dau_tier1": null
+        },
+        {
+          "id": "63836925766",
+          "name": "Cypher Games",
+          "full_name": "Indirect | Cypher Games",
+          "stage": "Started Outreach",
+          "amount": null,
+          "date": "2026-10-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/63836925766",
+          "dau_tier1": null
+        },
+        {
+          "id": "29202384969",
+          "name": "Gameberry Labs",
+          "full_name": "Indirect | Gameberry Labs",
+          "stage": "Sales Prospecting",
+          "amount": 198167.91,
+          "date": "2026-10-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/29202384969",
+          "dau_tier1": null
+        },
+        {
+          "id": "64895816211",
+          "name": "Defne from Cypher Games requests Bidmachine",
+          "full_name": "Defne from Cypher Games requests Bidmachine",
+          "stage": "Started Outreach",
+          "amount": null,
+          "date": "2026-10-02",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64895816211",
+          "dau_tier1": null
+        },
+        {
+          "id": "64877248671",
+          "name": "Walmart",
+          "full_name": "Indirect | Walmart",
+          "stage": "Lead",
+          "amount": null,
+          "date": "2026-10-04",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/64877248671",
+          "dau_tier1": null
+        },
+        {
+          "id": "65156943933",
+          "name": "Bauer Media",
+          "full_name": "Mediation | Bauer Media",
+          "stage": "Sales Qualified Lead",
+          "amount": null,
+          "date": "2026-10-04",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/65156943933",
+          "dau_tier1": null
+        },
+        {
+          "id": "60973927584",
+          "name": "Sliide",
+          "full_name": "Indirect | Sliide",
+          "stage": "Sales Proposal",
+          "amount": 0.0,
+          "date": "2026-10-05",
+          "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60973927584",
           "dau_tier1": null
         }
       ]
     }
   ],
-  "nudger_generated_at": "2026-09-28T15:04:14Z"
+  "nudger_generated_at": "2026-10-05T15:39:18Z"
 }
