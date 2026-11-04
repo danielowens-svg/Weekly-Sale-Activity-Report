@@ -1,0 +1,189 @@
+{
+  "generated_date": "4 Nov 2026",
+  "data_through": "2026-10-31",
+  "note": "Signed = deals of yours at Signed stage or later in HubSpot; signature date is when the deal entered Signed. Forecast is the deal's HubSpot Amount (expected annual gross profit), spread evenly per day from signature. Gross profit and publisher revenue (Seller Income) come from the BidMachine revenue report; ad requests and apps live (bundles with 100K+ requests in the month) from the full-funnel report. Full months only, to 31 Oct.",
+  "partners": [
+    {
+      "name": "Cranberry Apps",
+      "deal_id": "62648165683",
+      "seller_id": "1527",
+      "signed_date": "2026-07-24",
+      "stage": "Live & Testing",
+      "forecast_annual_gp": 124340.12,
+      "months": [
+        {
+          "month": "2026-07",
+          "gross_profit": 0,
+          "publisher_revenue": 0,
+          "requests": 0,
+          "apps_live": 0
+        },
+        {
+          "month": "2026-08",
+          "gross_profit": 71.12,
+          "publisher_revenue": 1104.54,
+          "requests": 28831078,
+          "apps_live": 1
+        },
+        {
+          "month": "2026-09",
+          "gross_profit": 144.5,
+          "publisher_revenue": 2246.4,
+          "requests": 44637853,
+          "apps_live": 2
+        },
+        {
+          "month": "2026-10",
+          "gross_profit": 137.78,
+          "publisher_revenue": 2121.0,
+          "requests": 38956391,
+          "apps_live": 2
+        }
+      ],
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/62648165683"
+    },
+    {
+      "name": "What3words",
+      "deal_id": "60786218535",
+      "seller_id": "1528",
+      "signed_date": "2026-07-24",
+      "stage": "Live & Testing",
+      "forecast_annual_gp": 34227,
+      "months": [
+        {
+          "month": "2026-07",
+          "gross_profit": 0,
+          "publisher_revenue": 0,
+          "requests": 0,
+          "apps_live": 0
+        },
+        {
+          "month": "2026-08",
+          "gross_profit": 0.16,
+          "publisher_revenue": 6.84,
+          "requests": 577626,
+          "apps_live": 1
+        },
+        {
+          "month": "2026-09",
+          "gross_profit": 27.14,
+          "publisher_revenue": 457.97,
+          "requests": 11517077,
+          "apps_live": 2
+        },
+        {
+          "month": "2026-10",
+          "gross_profit": 130.31,
+          "publisher_revenue": 2070.18,
+          "requests": 14383238,
+          "apps_live": 2
+        }
+      ],
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60786218535"
+    },
+    {
+      "name": "aka Messenger",
+      "deal_id": "62706551977",
+      "seller_id": "1576",
+      "signed_date": "2026-08-26",
+      "stage": "Signed",
+      "forecast_annual_gp": 22918.32,
+      "months": [
+        {
+          "month": "2026-08",
+          "gross_profit": 0,
+          "publisher_revenue": 0,
+          "requests": 0,
+          "apps_live": 0
+        },
+        {
+          "month": "2026-09",
+          "gross_profit": 3.14,
+          "publisher_revenue": 9.94,
+          "requests": 93243404,
+          "apps_live": 1
+        },
+        {
+          "month": "2026-10",
+          "gross_profit": 180.13,
+          "publisher_revenue": 591.94,
+          "requests": 7110919937,
+          "apps_live": 3
+        }
+      ],
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/62706551977"
+    },
+    {
+      "name": "Peaksel",
+      "deal_id": "60068956505",
+      "seller_id": "1659",
+      "signed_date": "2026-09-17",
+      "stage": "Signed",
+      "forecast_annual_gp": 72845.28,
+      "months": [
+        {
+          "month": "2026-09",
+          "gross_profit": 0,
+          "publisher_revenue": 0,
+          "requests": 0,
+          "apps_live": 0
+        },
+        {
+          "month": "2026-10",
+          "gross_profit": 56.82,
+          "publisher_revenue": 425.16,
+          "requests": 60564031,
+          "apps_live": 2
+        }
+      ],
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/60068956505"
+    },
+    {
+      "name": "Lulo apps",
+      "deal_id": "34813965976",
+      "seller_id": null,
+      "signed_date": "2026-09-21",
+      "stage": "Signed",
+      "forecast_annual_gp": 243826.65,
+      "months": [],
+      "status_note": "No BidMachine seller account or traffic found for Lulo since signing, so nothing is earning yet against the forecast.",
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/34813965976"
+    },
+    {
+      "name": "YAZIO",
+      "deal_id": "62852776065",
+      "seller_id": "1670",
+      "signed_date": "2026-09-30",
+      "stage": "Live & Testing",
+      "forecast_annual_gp": 62780,
+      "months": [
+        {
+          "month": "2026-09",
+          "gross_profit": 0,
+          "publisher_revenue": 0,
+          "requests": 0,
+          "apps_live": 0
+        },
+        {
+          "month": "2026-10",
+          "gross_profit": 977.49,
+          "publisher_revenue": 4837.57,
+          "requests": 197112960,
+          "apps_live": 2
+        }
+      ],
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/62852776065"
+    },
+    {
+      "name": "Muzz",
+      "deal_id": "61935672396",
+      "seller_id": null,
+      "signed_date": "2026-10-02",
+      "stage": "Signed",
+      "forecast_annual_gp": 65000,
+      "months": [],
+      "status_note": "No BidMachine seller account or traffic found for Muzz since signing, so nothing is earning yet against the forecast.",
+      "url": "https://app.hubspot.com/contacts/5606823/record/0-3/61935672396"
+    }
+  ]
+}
