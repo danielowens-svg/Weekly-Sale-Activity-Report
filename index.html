@@ -139,6 +139,44 @@
   .nudger-skip:hover { color: var(--text); }
   .nudger-progress { font-size: 11px; color: var(--muted); text-align: right; }
   .nudger-empty { font-size: 13px; color: var(--muted); text-align: center; padding: .5rem 0; }
+
+  /* ── Signed partners ── */
+  .view-btn .rep-avatar { font-size: 13px; }
+  .sp-mobile-switch { display: none; }
+  .sp-table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow-x: auto; margin-bottom: 2rem; }
+  .sp-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .sp-table th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .sp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .sp-table tr:last-child td { border-bottom: none; }
+  .sp-table td.num, .sp-table th.num { text-align: right; }
+  .sp-table a { color: var(--accent); text-decoration: none; }
+  .sp-table a:hover { text-decoration: underline; }
+  .sp-table tbody tr { cursor: pointer; }
+  .sp-table tbody tr:hover td { background: var(--surface); }
+  .sp-pos { color: var(--accent2); font-weight: 600; }
+  .sp-neg { color: var(--accent4); font-weight: 600; }
+  .sp-badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); }
+  .sp-badge.live { color: var(--accent2); border-color: rgba(52,211,153,.35); }
+  .sp-badge.none { color: var(--accent3); border-color: rgba(245,158,11,.35); }
+  .sp-partner { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; scroll-margin-top: 1rem; }
+  .sp-partner-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .sp-partner-name { font-size: 16px; font-weight: 600; }
+  .sp-partner-name a { color: var(--text); text-decoration: none; }
+  .sp-partner-name a:hover { color: var(--accent); }
+  .sp-partner-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .sp-kpis { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .sp-kpi-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .sp-kpi-value { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .sp-charts { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .sp-chart { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .75rem .875rem; }
+  .sp-chart-title { font-size: 12px; font-weight: 600; margin-bottom: .5rem; display: flex; justify-content: space-between; gap: 8px; }
+  .sp-chart-title span { font-weight: 400; color: var(--muted); }
+  .sp-chart-wrap { height: 150px; position: relative; }
+  .sp-empty { background: var(--surface); border: 1px dashed var(--border); border-radius: 8px; padding: 1.25rem; font-size: 13px; color: var(--muted); }
+  .sp-note { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; max-width: 820px; }
+  @media (max-width: 720px) {
+    .sp-mobile-switch { display: flex; }
+  }
 </style>
 </head>
 <body>
@@ -150,6 +188,16 @@
       <div class="wordmark">BidMachine</div>
       <div class="sub">Supply Sales Dashboard</div>
     </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Views</div>
+      <button class="rep-btn view-btn active" data-view="activity" onclick="selectView('activity')">
+        <div class="rep-avatar">📈</div><span>Sales activity</span>
+      </button>
+      <button class="rep-btn view-btn" data-view="partners" onclick="selectView('partners')">
+        <div class="rep-avatar">✍️</div><span>Signed partners</span>
+      </button>
+    </div>
+    <hr class="sidebar-divider">
     <div class="sidebar-section">
       <div class="sidebar-label">Sales reps</div>
       <div id="rep-list"></div>
@@ -191,6 +239,9 @@ let DATA = null;
 let currentRepIdx = 0;
 let currentPeriod = 'quarter';
 let chartInstance = null;
+let PARTNERS = null;
+let currentView = 'activity';
+let partnerCharts = [];
 
 
 const PERIOD_LABELS = { quarter: 'This quarter', last_quarter: 'Last quarter', year: 'Year to date' };
@@ -212,6 +263,12 @@ async function boot() {
     const res = await fetch('./data/sales_data.json?t=' + Date.now());
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     DATA = await res.json();
+    // Signed partners live in their own file so generate_data.py and
+    // refresh_nudger.py can never overwrite them. Missing file = empty tab.
+    try {
+      const sp = await fetch('./data/signed_partners.json?t=' + Date.now());
+      if (sp.ok) PARTNERS = await sp.json();
+    } catch (e) { PARTNERS = null; }
     document.getElementById('loading-state').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
     buildSidebar();
@@ -246,7 +303,9 @@ function selectRep(idx) {
 
 // ── Render ────────────────────────────────────────────────────────────────────
 function render() {
-  if (currentPeriod === 'compare') { renderCompare(); return; }
+  destroyPartnerCharts();
+  if (currentView === 'partners') { renderPartners(); return; }
+  if (currentPeriod === 'compare') { renderCompare(); addMobileSwitch(); return; }
   const rep = DATA.reps[currentRepIdx];
   const period = rep.periods[currentPeriod];
   const dash = document.getElementById('dashboard');
@@ -292,7 +351,9 @@ function render() {
             <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>New deals</div>
             <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Meetings</div>
           </div>
-          <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
     </div>
 
     <div class="section-title">Stage breakdown — deals touched this ${currentPeriod === 'week' ? 'week' : currentPeriod}</div>
@@ -308,6 +369,7 @@ function render() {
   renderChart(rep);
   buildNudgerQueue();
   renderNudger();
+  addMobileSwitch();
 }
 
 function chartTitle() {
@@ -527,7 +589,9 @@ function renderCompare() {
             <div class="legend-item"><div class="legend-dot" style="background:#4f7cff"></div>Q3 2026</div>
             <div class="legend-item"><div class="legend-dot" style="background:#374151"></div>Q2 2026</div>
           </div>
-          <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="activity-chart"></canvas></div>
     </div>
 
     <div class="page-footer">
@@ -697,6 +761,259 @@ function nudgerNext() {
     /* private window or storage blocked — position just won't persist */
   }
   renderNudger();
+}
+
+// ── View switch ───────────────────────────────────────────────────────────────
+function selectView(v) {
+  currentView = v;
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  window.scrollTo(0, 0);
+  render();
+}
+
+// The sidebar is hidden on phones, so give the page its own switch there.
+function addMobileSwitch() {
+  const dash = document.getElementById('dashboard');
+  dash.insertAdjacentHTML('afterbegin', `
+    <div class="period-tabs sp-mobile-switch" style="margin-bottom:1rem;width:max-content">
+      <button class="period-tab ${currentView === 'activity' ? 'active' : ''}" onclick="selectView('activity')">Sales activity</button>
+      <button class="period-tab ${currentView === 'partners' ? 'active' : ''}" onclick="selectView('partners')">Signed partners</button>
+    </div>`);
+}
+
+// ── Signed partners ───────────────────────────────────────────────────────────
+// Forecast = the deal's HubSpot Amount when it was signed, which is expected
+// annual gross profit. It is spread evenly per day, starting on the signature
+// date, so a partner signed on the 20th is only expected to deliver 11 days'
+// worth in that month.
+
+function destroyPartnerCharts() {
+  partnerCharts.forEach(c => c.destroy());
+  partnerCharts = [];
+}
+
+function parseDay(s) { return new Date(s.slice(0, 10) + 'T00:00:00Z'); }
+const DAY_MS = 86400000;
+
+function monthLabel(m) {
+  const d = new Date(m + '-01T00:00:00Z');
+  return d.toLocaleString('en-GB', { month: 'short', year: '2-digit', timeZone: 'UTC' });
+}
+
+// Days in month `m` (YYYY-MM) between signature and the last day with data.
+function activeDays(m, signed, through) {
+  const start = parseDay(m + '-01');
+  const end = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 1)); // exclusive
+  const from = Math.max(start, parseDay(signed));
+  const to = Math.min(end, parseDay(through).getTime() + DAY_MS);
+  return Math.max(0, Math.round((to - from) / DAY_MS));
+}
+
+function partnerSeries(p, through) {
+  const daily = (p.forecast_annual_gp || 0) / 365;
+  let cumA = 0, cumF = 0;
+  return (p.months || []).map(r => {
+    const days = activeDays(r.month, p.signed_date, through);
+    const fc = daily * days;
+    cumA += r.gross_profit || 0;
+    cumF += fc;
+    return { ...r, days, forecast: fc, cum_actual: cumA, cum_forecast: cumF };
+  });
+}
+
+function partnerTotals(p, through) {
+  const s = partnerSeries(p, through);
+  const last = s[s.length - 1];
+  const actual = last ? last.cum_actual : 0;
+  // Forecast to date, even if no months of data have come in yet.
+  const daysSince = Math.max(0, Math.round((parseDay(through).getTime() + DAY_MS - parseDay(p.signed_date)) / DAY_MS));
+  const forecast = (p.forecast_annual_gp || 0) / 365 * daysSince;
+  const lastFull = s.length ? s[s.length - 1] : null;
+  return {
+    series: s, actual, forecast, daysSince,
+    variance: actual - forecast,
+    variancePct: forecast > 0 ? (actual - forecast) / forecast : null,
+    revenue: s.reduce((a, r) => a + (r.publisher_revenue || 0), 0),
+    appsLive: lastFull ? lastFull.apps_live : null,
+  };
+}
+
+function money(v, dp) {
+  if (v === null || v === undefined || isNaN(v)) return '—';
+  const n = Number(v), a = Math.abs(n), sign = n < 0 ? '−' : '';
+  if (a >= 1e6) return sign + '$' + (a / 1e6).toFixed(1) + 'M';
+  if (a >= 1e4) return sign + '$' + (a / 1e3).toFixed(0) + 'K';
+  if (a >= 1e3) return sign + '$' + (a / 1e3).toFixed(1) + 'K';
+  return sign + '$' + a.toFixed(dp === undefined ? 0 : dp);
+}
+
+function bigNum(v) {
+  if (v === null || v === undefined || isNaN(v)) return '—';
+  const n = Number(v);
+  if (n >= 1e9) return (n / 1e9).toFixed(1) + 'B';
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(0) + 'K';
+  return String(Math.round(n));
+}
+
+function pct(v) {
+  if (v === null || v === undefined || isNaN(v)) return '—';
+  return (v >= 0 ? '+' : '−') + Math.abs(v * 100).toFixed(0) + '%';
+}
+
+function fmtDate(s) {
+  return parseDay(s).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
+
+function renderPartners() {
+  const dash = document.getElementById('dashboard');
+  const P = PARTNERS;
+  const header = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="rep-name">Signed partners</div>
+        <div class="page-sub">${P ? `Data to ${fmtDate(P.data_through)} · updated ${P.generated_date}` : 'No data file yet'}</div>
+      </div>
+    </div>`;
+
+  if (!P || !(P.partners || []).length) {
+    dash.innerHTML = header + `<div class="sp-empty">No signed partners yet. Add <code>data/signed_partners.json</code> to the repo.</div>`;
+    addMobileSwitch();
+    return;
+  }
+
+  const through = P.data_through;
+  const rows = P.partners
+    .map(p => ({ p, t: partnerTotals(p, through) }))
+    .sort((a, b) => b.p.signed_date.localeCompare(a.p.signed_date));
+
+  const vClass = v => v === null ? '' : (v >= 0 ? 'sp-pos' : 'sp-neg');
+
+  dash.innerHTML = header + `
+    <div class="sp-note">${P.note || ''}</div>
+
+    <div class="sp-table-wrap">
+      <table class="sp-table">
+        <thead><tr>
+          <th>Partner</th><th>Signed</th><th>Stage</th><th>Data</th>
+          <th class="num">Forecast GP / yr</th><th class="num">Forecast to date</th>
+          <th class="num">Actual GP</th><th class="num">Variance</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(({ p, t }, i) => `
+            <tr onclick="document.getElementById('sp-${i}').scrollIntoView({behavior:'smooth'})">
+              <td><a href="${p.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${p.name}</a></td>
+              <td>${fmtDate(p.signed_date)} <span style="color:var(--muted);font-size:11px">· ${t.daysSince}d</span></td>
+              <td>${p.stage}</td>
+              <td>${p.seller_id ? `<span class="sp-badge live">Seller ${p.seller_id}</span>` : '<span class="sp-badge none">No traffic</span>'}</td>
+              <td class="num">${money(p.forecast_annual_gp)}</td>
+              <td class="num">${money(t.forecast)}</td>
+              <td class="num">${p.seller_id ? money(t.actual) : '—'}</td>
+              <td class="num ${vClass(t.variancePct)}">${money(t.variance)} <span style="font-weight:400;font-size:11px">${pct(t.variancePct)}</span></td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+
+    ${rows.map(({ p, t }, i) => partnerCard(p, t, i)).join('')}
+
+    <div class="page-footer">
+      <div class="footer-text">Deals: HubSpot · Performance: Appodeal BI (Rill), BidMachine exchange</div>
+      <a class="footer-link" href="https://app.hubspot.com/contacts/5606823/objects/0-3/" target="_blank" rel="noopener">View in HubSpot ↗</a>
+    </div>`;
+
+  rows.forEach(({ p, t }, i) => drawPartnerCharts(p, t, i));
+  addMobileSwitch();
+}
+
+function partnerCard(p, t, i) {
+  const vColor = t.variancePct === null ? 'var(--text)' : (t.variance >= 0 ? 'var(--accent2)' : 'var(--accent4)');
+  const body = !p.seller_id || !t.series.length
+    ? `<div class="sp-empty">${p.status_note || 'No BidMachine traffic found for this partner since signing.'}</div>`
+    : `<div class="sp-charts">
+        <div class="sp-chart"><div class="sp-chart-title">Gross profit vs forecast <span>monthly</span></div><div class="sp-chart-wrap"><canvas id="sp-gp-${i}"></canvas></div></div>
+        <div class="sp-chart"><div class="sp-chart-title">Variance to forecast <span>cumulative</span></div><div class="sp-chart-wrap"><canvas id="sp-var-${i}"></canvas></div></div>
+        <div class="sp-chart"><div class="sp-chart-title">Publisher revenue <span>monthly</span></div><div class="sp-chart-wrap"><canvas id="sp-rev-${i}"></canvas></div></div>
+        <div class="sp-chart"><div class="sp-chart-title">Ad requests <span>monthly</span></div><div class="sp-chart-wrap"><canvas id="sp-req-${i}"></canvas></div></div>
+        <div class="sp-chart"><div class="sp-chart-title">Apps live <span>bundles with requests</span></div><div class="sp-chart-wrap"><canvas id="sp-apps-${i}"></canvas></div></div>
+      </div>`;
+
+  return `
+    <div class="sp-partner" id="sp-${i}">
+      <div class="sp-partner-head">
+        <div>
+          <div class="sp-partner-name"><a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a></div>
+          <div class="sp-partner-sub">Signed ${fmtDate(p.signed_date)} · ${p.stage}${p.seller_id ? ' · Seller ID ' + p.seller_id : ''}</div>
+        </div>
+        <div class="sp-kpis">
+          <div><div class="sp-kpi-label">Forecast to date</div><div class="sp-kpi-value">${money(t.forecast)}</div></div>
+          <div><div class="sp-kpi-label">Actual GP</div><div class="sp-kpi-value">${p.seller_id ? money(t.actual) : '—'}</div></div>
+          <div><div class="sp-kpi-label">Variance</div><div class="sp-kpi-value" style="color:${vColor}">${pct(t.variancePct)}</div></div>
+          <div><div class="sp-kpi-label">Publisher revenue</div><div class="sp-kpi-value">${p.seller_id ? money(t.revenue) : '—'}</div></div>
+        </div>
+      </div>
+      ${body}
+    </div>`;
+}
+
+function drawPartnerCharts(p, t, i) {
+  if (!p.seller_id || !t.series.length) return;
+  const s = t.series;
+  const labels = s.map(r => monthLabel(r.month) + (r.partial ? '*' : ''));
+  const grid = { color: '#2a2f45' };
+  const ticks = { color: '#6b7280', font: { size: 10 } };
+  const tooltip = { backgroundColor: '#1e2336', titleColor: '#e8eaf0', bodyColor: '#9ca3af', borderColor: '#2a2f45', borderWidth: 1 };
+  const base = (yFmt, legend) => ({
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: legend ? { display: true, position: 'bottom', labels: { color: '#9ca3af', boxWidth: 8, boxHeight: 8, font: { size: 10 } } } : { display: false },
+      tooltip: { ...tooltip, callbacks: { label: c => (c.dataset.label ? c.dataset.label + ': ' : '') + yFmt(c.parsed.y) } },
+    },
+    scales: { x: { grid, ticks }, y: { grid, ticks: { ...ticks, callback: v => yFmt(v) }, beginAtZero: true } },
+  });
+  const make = (id, cfg) => {
+    const el = document.getElementById(id);
+    if (el) partnerCharts.push(new Chart(el, cfg));
+  };
+  const money2 = v => money(v, Math.abs(v) < 100 ? 0 : 0);
+
+  make('sp-gp-' + i, {
+    type: 'bar',
+    data: { labels, datasets: [
+      { label: 'Actual GP', data: s.map(r => r.gross_profit), backgroundColor: '#4f7cff', borderRadius: 4, order: 2 },
+      { label: 'Forecast', type: 'line', data: s.map(r => r.forecast), borderColor: '#f59e0b', backgroundColor: '#f59e0b', borderDash: [4, 3], pointRadius: 3, order: 1 },
+    ] },
+    options: base(money2, true),
+  });
+
+  make('sp-var-' + i, {
+    type: 'line',
+    data: { labels, datasets: [
+      { label: 'Actual (cum.)', data: s.map(r => r.cum_actual), borderColor: '#34d399', backgroundColor: 'rgba(52,211,153,.12)', fill: true, pointRadius: 3, tension: .25 },
+      { label: 'Forecast (cum.)', data: s.map(r => r.cum_forecast), borderColor: '#f59e0b', borderDash: [4, 3], pointRadius: 3, tension: .25 },
+    ] },
+    options: base(money2, true),
+  });
+
+  make('sp-rev-' + i, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: 'Publisher revenue', data: s.map(r => r.publisher_revenue), backgroundColor: '#a78bfa', borderRadius: 4 }] },
+    options: base(money2, false),
+  });
+
+  make('sp-req-' + i, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: 'Ad requests', data: s.map(r => r.requests), backgroundColor: '#0ea5e9', borderRadius: 4 }] },
+    options: base(bigNum, false),
+  });
+
+  const appsOpts = base(v => String(Math.round(v)), false);
+  appsOpts.scales.y.ticks.precision = 0;
+  make('sp-apps-' + i, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: 'Apps live', data: s.map(r => r.apps_live), backgroundColor: '#6ee7b7', borderRadius: 4 }] },
+    options: appsOpts,
+  });
 }
 
 boot();
